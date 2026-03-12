@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+
+    public GameObject BoxCollider2D;
+
+    private bool isDragging = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +21,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnMouseDrag()
     { 
+        isDragging = true; 
         // Get the main camera
         Camera cam = Camera.main;
         if (cam == null) return;
@@ -28,6 +34,21 @@ public class PlayerScript : MonoBehaviour
 
         // Keep the object's original z
         transform.position = new Vector3(mouseWorld.x, mouseWorld.y, transform.position.z);
+    }
+
+    void OnMouseUp()
+    {
+        isDragging = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PaperTestTag") && isDragging)
+        {
+            Debug.Log("Collided with PaperTestTag");
+
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder +1;
+        }
     }
 }
 
