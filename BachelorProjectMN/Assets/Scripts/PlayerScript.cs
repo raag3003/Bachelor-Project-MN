@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-
-    public GameObject BoxCollider2D;
-
     private bool isDragging = false;
+
+    private string currentHoverTag = "";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,16 +38,28 @@ public class PlayerScript : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
+
+        if (currentHoverTag != "")
+        {
+            transform.position = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>().position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PaperTestTag") && isDragging)
-        {
-            Debug.Log("Collided with PaperTestTag");
+        currentHoverTag = collision.gameObject.tag;
 
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder +1;
+        if (isDragging)
+        {
+            Debug.Log("Collided with " + currentHoverTag);
+
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+            currentHoverTag = "";
     }
 }
 
