@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField, Range(-10, 10)]
+    public int karmaScore = 0;
+
     private bool isDragging = false;
 
     private string currentHoverTag = "";
@@ -39,7 +42,8 @@ public class PlayerScript : MonoBehaviour
     {
         isDragging = false;
 
-        if (currentHoverTag != "")
+        // If the article piece is released while hovering over a valid tag, snap it to that position
+        if (currentHoverTag != "" || currentHoverTag == "PaperTestTag") //Change PaperTestTag to the tag name once it's decided
         {
             transform.position = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>().position;
         }
@@ -47,19 +51,25 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
         currentHoverTag = collision.gameObject.tag;
 
+        // Make sure that the piece being dragged is always on top of the piece it's hovering over.
+        // Otherwise 2 different pieces with same script will be on top of each other and it will look weird.
         if (isDragging)
         {
             Debug.Log("Collided with " + currentHoverTag);
 
+            // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-            currentHoverTag = "";
+        // Clear the current hover tag since it's no longer hovering over it
+        // Otherwise the piece would snap back to the last hovered item no matter where you drop it.
+        currentHoverTag = "";
     }
 }
 
