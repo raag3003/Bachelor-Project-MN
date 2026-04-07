@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
     public int karmaScore = 0;
 
     private bool isDragging = false;
+    private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
 
     private string currentHoverTag = "";
 
@@ -18,11 +19,14 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isStuck)
+        {
+            transform.position = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>().position;
+        }
     }
 
     private void OnMouseDrag()
-    { 
+    {
         isDragging = true; 
         // Get the main camera
         Camera cam = Camera.main;
@@ -40,24 +44,31 @@ public class PlayerScript : MonoBehaviour
 
     void OnMouseUp()
     {
+        Debug.Log("Mouse released on gameobject: " + this.gameObject.name);
         isDragging = false;
 
         // If the article piece is released while hovering over a valid tag, snap it to that position
         if (currentHoverTag != "" || currentHoverTag == "PaperTestTag") //Change PaperTestTag to the tag name once it's decided
         {
+            isStuck = true; // 
             transform.position = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>().position;
         }
     }
 
+    private void OnMouseDown()
+    {
+        Debug.Log("Mouse pressed on gameobject: " + this.gameObject.name);
+        isStuck = false; // Make sure that when you click on the piece, it unsticks from the article so you can move it around again
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
-        currentHoverTag = collision.gameObject.tag;
-
         // Make sure that the piece being dragged is always on top of the piece it's hovering over.
         // Otherwise 2 different pieces with same script will be on top of each other and it will look weird.
-        if (isDragging)
+        if (isDragging && !isStuck)
         {
+            // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
+            currentHoverTag = collision.gameObject.tag;
             Debug.Log("Collided with " + currentHoverTag);
 
             // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
@@ -67,9 +78,13 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // Clear the current hover tag since it's no longer hovering over it
-        // Otherwise the piece would snap back to the last hovered item no matter where you drop it.
-        currentHoverTag = "";
+        if (!isStuck)
+        {
+            // Clear the current hover tag since it's no longer hovering over it
+            // Otherwise the piece would snap back to the last hovered item no matter where you drop it.
+            currentHoverTag = "";
+        }
+       
     }
 }
 

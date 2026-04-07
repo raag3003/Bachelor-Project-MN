@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - PaperTestTag
+  - PictureTag
+  - TitleTag
+  - ArticleTextTag
+  - TextTag
+  - ArtciclePictureText
+  - ArticleTitleTag
   layers:
   - Default
   - TransparentFX
