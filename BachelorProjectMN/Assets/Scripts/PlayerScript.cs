@@ -28,6 +28,9 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+
+    // This function runs every frame while the mouse input = left mouse button is kept down
+    // We use this function to move the piecesb around on screen.
     private void OnMouseDrag()
     {
         isDragging = true; 
@@ -45,6 +48,9 @@ public class PlayerScript : MonoBehaviour
         transform.position = new Vector3(mouseWorld.x, mouseWorld.y, transform.position.z);
     }
 
+
+    // This function calls when the left mouse button is released
+    // We use this function to let the pieces go on the article sections
     void OnMouseUp()
     {
         Debug.Log("Mouse released on gameobject: " + this.gameObject.name);
@@ -58,6 +64,8 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    // This function is called when the left mouse button is pressed down on the object
+    // At the moment, it is used to debug and make sure the piece gets unstuck from the current location 
     private void OnMouseDown()
     {
         Debug.Log("Mouse pressed on gameobject: " + this.gameObject.name);
@@ -92,7 +100,7 @@ public class PlayerScript : MonoBehaviour
 
     public void ResetPosition()
     {
-        if (transform.position != HomeBase.transform.position)
+        if (transform.position != HomeBase.transform.position && !isStuck)
         {
             lastKnownPosition = transform.position; // Store the current position before resetting
             transform.position = HomeBase.transform.position;
