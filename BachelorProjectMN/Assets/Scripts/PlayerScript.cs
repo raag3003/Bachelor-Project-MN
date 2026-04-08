@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
 
     private string currentHoverTag = "";
+    private Transform currentStuckTarget; // Store the transform of the article piece that the player piece is currently stuck to
 
     private Vector3 lastKnownPosition; // Store the piece's last known position before returns to "home base".
 
@@ -24,7 +25,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (isStuck)
         {
-            transform.position = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>().position;
+            transform.position = currentStuckTarget.position; // Have the piece follow the article piece it's stuck to if it's currently stuck.
         }
     }
 
@@ -53,14 +54,17 @@ public class PlayerScript : MonoBehaviour
     // We use this function to let the pieces go on the article sections
     void OnMouseUp()
     {
-        Debug.Log("Mouse released on gameobject: " + this.gameObject.name);
         isDragging = false;
 
         // If the article piece is released while hovering over a valid tag, snap it to that position
-        if (currentHoverTag != "" || currentHoverTag == "PaperTestTag") //Change PaperTestTag to the tag name once it's decided
+        if (!string.IsNullOrEmpty(currentHoverTag))
         {
-            isStuck = true; // 
-            transform.position = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>().position;
+            isStuck = true; // Make sure that the piece is stuck so ResetPosition does not move it if pressed
+            currentStuckTarget = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>();
+            transform.position = currentStuckTarget.position;
+
+            // Disable the collider of the article piece so it doesn't interfere with dragging other pieces around
+            currentStuckTarget.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
@@ -69,7 +73,16 @@ public class PlayerScript : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Mouse pressed on gameobject: " + this.gameObject.name);
-        isStuck = false; // Make sure that when you click on the piece, it unsticks from the article so you can move it around again
+        currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
+        if (isStuck)
+        {
+            isStuck = false; // Make sure that when you click on the piece, it unsticks from the article so you can move it around again
+            if (currentStuckTarget != null)
+            {
+                currentStuckTarget.GetComponent<BoxCollider2D>().enabled = true; // Re-enable the collider of the article piece
+                currentStuckTarget = null;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -98,6 +111,8 @@ public class PlayerScript : MonoBehaviour
        
     }
 
+    // This function is for the button that resets all pieces back to the "home base" position.
+    // If the piece is already at home base, it will move back to the last known position before it was reset.
     public void ResetPosition()
     {
         if (transform.position != HomeBase.transform.position && !isStuck)
