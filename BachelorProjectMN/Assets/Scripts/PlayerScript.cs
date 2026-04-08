@@ -4,11 +4,14 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField, Range(-10, 10)]
     public int karmaScore = 0;
+    public GameObject HomeBase;
 
     private bool isDragging = false;
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
 
     private string currentHoverTag = "";
+
+    private Vector3 lastKnownPosition; // Store the piece's last known position before returns to "home base".
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -85,6 +88,24 @@ public class PlayerScript : MonoBehaviour
             currentHoverTag = "";
         }
        
+    }
+
+    public void ResetPosition()
+    {
+        if (transform.position != HomeBase.transform.position)
+        {
+            lastKnownPosition = transform.position; // Store the current position before resetting
+            transform.position = HomeBase.transform.position;
+            isStuck = false;
+            // disable the collider so the player cant drag it from home base while in home base
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else
+        {
+            // enable the collider so the player can drag it again when its on the table
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            transform.position = lastKnownPosition; // Move back to the last known position if it's already at home base
+        }
     }
 }
 
