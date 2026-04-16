@@ -3,6 +3,7 @@ using UnityEngine;
 public class SystemScript : MonoBehaviour
 {
     public int karmaScore = 0;
+    int testKarma = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,10 @@ public class SystemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (testKarma != karmaScore)
+        {
+            Debug.Log("Karma Score: " + karmaScore);
+            testKarma = karmaScore;
+        }
     }
 }

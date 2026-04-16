@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -579,6 +580,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00950fc8889e0a746b28acdb29be4804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SystemScript
+  karmaScore: 0
 --- !u!1 &599846662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,8 +1579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 0
+  karmaScore: 3
   HomeBase: {fileID: 123376143}
+  SystemScript: {fileID: 519420033}
 --- !u!50 &1383949592
 Rigidbody2D:
   serializedVersion: 5
@@ -1884,8 +1899,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 0
+  karmaScore: -3
   HomeBase: {fileID: 689317486}
+  SystemScript: {fileID: 519420033}
 --- !u!50 &1773828216
 Rigidbody2D:
   serializedVersion: 5

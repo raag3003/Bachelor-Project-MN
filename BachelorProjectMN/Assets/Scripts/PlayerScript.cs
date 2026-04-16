@@ -6,6 +6,8 @@ public class PlayerScript : MonoBehaviour
     public int karmaScore = 0;
     public GameObject HomeBase;
 
+    public SystemScript SystemScript;
+
     private bool isDragging = false;
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
 
@@ -17,7 +19,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        SystemScript = SystemScript.GetComponent<SystemScript>();
     }
 
     // Update is called once per frame
@@ -65,6 +67,8 @@ public class PlayerScript : MonoBehaviour
 
             // Disable the collider of the article piece so it doesn't interfere with dragging other pieces around
             currentStuckTarget.GetComponent<BoxCollider2D>().enabled = false;
+
+            SystemScript.karmaScore += karmaScore; // Add the karma score of the piece to the total karma score in the SystemScript
         }
     }
 
@@ -81,6 +85,8 @@ public class PlayerScript : MonoBehaviour
             {
                 currentStuckTarget.GetComponent<BoxCollider2D>().enabled = true; // Re-enable the collider of the article piece
                 currentStuckTarget = null;
+
+                SystemScript.karmaScore -= karmaScore; // Subtract the karma score of the piece from the total karma score in the SystemScript
             }
         }
     }
@@ -93,7 +99,6 @@ public class PlayerScript : MonoBehaviour
         {
             // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
             currentHoverTag = collision.gameObject.tag;
-            Debug.Log("Collided with " + currentHoverTag);
 
             // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
