@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if (isStuck)
-        {
+        {            
             transform.position = currentStuckTarget.position; // Have the piece follow the article piece it's stuck to if it's currently stuck.
         }
     }
@@ -72,9 +72,6 @@ public class PlayerScript : MonoBehaviour
             // Get the transform for the article section that the piece is being dropped on so we can snap to it and follow it around when dragged
             currentStuckTarget = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>();
             
-            // Set the parent of the piece to the article piece it's being dropped on so it follows it around when dragged
-            transform.SetParent(currentStuckTarget); 
-            
             transform.position = currentStuckTarget.position;
 
             // Disable the collider of the article piece so it doesn't interfere with dragging other pieces around
@@ -98,7 +95,7 @@ public class PlayerScript : MonoBehaviour
             if (currentStuckTarget != null)
             {
                 currentStuckTarget.GetComponent<BoxCollider2D>().enabled = true; // Re-enable the collider of the article piece
-                transform.SetParent(null); // Detach the piece from the article piece
+                               
                 currentStuckTarget = null;
 
                 SystemScript.RemovePiece(karmaScore); // Subtract the karma score of the piece from the total karma score in the SystemScript
