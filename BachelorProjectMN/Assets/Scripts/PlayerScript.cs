@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -57,18 +58,30 @@ public class PlayerScript : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
-
         // If the article piece is released while hovering over a valid tag, snap it to that position
         if (!string.IsNullOrEmpty(currentHoverTag))
         {
+            string[] validTags = { "ArticleTitleTag", "ArticlePictureTag", "ArticleTextTag" }; // Define the valid tags for dropping the piece
+            if (!validTags.Contains(currentHoverTag))
+            {
+                Debug.Log("Invalid drop location. Please drop the piece on an article piece.");
+                return; // Exit the function if it's not a valid drop location
+            }
             isStuck = true; // Make sure that the piece is stuck so ResetPosition does not move it if pressed
+
+            // Get the transform for the article section that the piece is being dropped on so we can snap to it and follow it around when dragged
             currentStuckTarget = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>();
+            
+            // Set the parent of the piece to the article piece it's being dropped on so it follows it around when dragged
+            transform.SetParent(currentStuckTarget); 
+            
             transform.position = currentStuckTarget.position;
 
             // Disable the collider of the article piece so it doesn't interfere with dragging other pieces around
             currentStuckTarget.GetComponent<BoxCollider2D>().enabled = false;
 
-            SystemScript.karmaScore += karmaScore; // Add the karma score of the piece to the total karma score in the SystemScript
+            // Add the karma score of the piece to the total karma score in the SystemScript
+            SystemScript.AddPiece(karmaScore); 
         }
     }
 
@@ -78,15 +91,17 @@ public class PlayerScript : MonoBehaviour
     {
         Debug.Log("Mouse pressed on gameobject: " + this.gameObject.name);
         currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
+        
         if (isStuck)
         {
             isStuck = false; // Make sure that when you click on the piece, it unsticks from the article so you can move it around again
             if (currentStuckTarget != null)
             {
                 currentStuckTarget.GetComponent<BoxCollider2D>().enabled = true; // Re-enable the collider of the article piece
+                transform.SetParent(null); // Detach the piece from the article piece
                 currentStuckTarget = null;
 
-                SystemScript.karmaScore -= karmaScore; // Subtract the karma score of the piece from the total karma score in the SystemScript
+                SystemScript.RemovePiece(karmaScore); // Subtract the karma score of the piece from the total karma score in the SystemScript
             }
         }
     }
@@ -107,11 +122,12 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("Exited trigger with gameobject: " + collision.gameObject.name);
         if (!isStuck)
         {
             // Clear the current hover tag since it's no longer hovering over it
             // Otherwise the piece would snap back to the last hovered item no matter where you drop it.
-            currentHoverTag = "";
+            currentHoverTag = null;
         }
        
     }
