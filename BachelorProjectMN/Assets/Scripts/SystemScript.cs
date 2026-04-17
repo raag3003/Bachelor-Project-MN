@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SystemScript : MonoBehaviour
 {
-    public GameObject submitButton;
+    public GameObject submitFailedText; 
 
     public int karmaScore = 0;
     int testKarma = 0;
@@ -18,11 +19,7 @@ public class SystemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (testKarma != karmaScore)
-        {
-            Debug.Log("Karma Score: " + karmaScore);
-            testKarma = karmaScore;
-        }
+
     }
 
     public void AddPiece(int _karmaValue)
@@ -32,7 +29,6 @@ public class SystemScript : MonoBehaviour
 
         if (piecesOnArticle == piecesNedded)
         {
-            submitButton.SetActive(true); // Show the submit button if there are enough pieces on the article to submit it
             Debug.Log("You have added enough pieces to submit the article!");
         }
 
@@ -42,8 +38,6 @@ public class SystemScript : MonoBehaviour
 
     public void RemovePiece(int _karmaValue)
     {
-        submitButton.SetActive(false); // Hide the submit button if there are not enough pieces on the article to submit it
-
         karmaScore -= _karmaValue;
         piecesOnArticle--;
         Debug.Log("Removed a piece with a karma value of: " + _karmaValue);
@@ -53,6 +47,13 @@ public class SystemScript : MonoBehaviour
 
     public void SubmitArticle()
     {
+        if (piecesOnArticle != piecesNedded)
+        {
+            submitFailedText.SetActive(true);
+            submitFailedText.GetComponent<FailedSubmitScript>().KillMyself();
+            return;
+        }
+
         /* Define the karma score thresholds for each category of article. These values can be adjusted as needed to fit the desired scoring system.
          If the karmaScore is between -... and -15 it is considered a horible article, between -14 and -7 it is considered a bad article, between -6 and 6 it is considered a neutral article,
          between 7 and 14 it is considered a solid article, and between 15 and ... it is considered a great article.

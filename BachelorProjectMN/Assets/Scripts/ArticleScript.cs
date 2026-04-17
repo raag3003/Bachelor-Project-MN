@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ArticleScript : MonoBehaviour
 {
+    public GameObject submitButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +30,24 @@ public class ArticleScript : MonoBehaviour
 
         // Keep the object's original z
         transform.position = new Vector3(mouseWorld.x, mouseWorld.y, transform.position.z);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SubmitTag"))
+        {
+            Debug.Log("Article entered the submit area!"); // Debug log to confirm the collision is detected
+            submitButton.SetActive(true); // Show the submit button when the article collides with the submit area
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SubmitTag"))
+        {
+            Debug.Log("Article left the submit area!"); // Debug log to confirm the collision exit is detected
+            submitButton.SetActive(false); // Hide the submit button when the article leaves the submit area
+        }
     }
 
 }

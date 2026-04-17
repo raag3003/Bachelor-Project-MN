@@ -9,8 +9,9 @@ TagManager:
   - TitleTag
   - ArticleTextTag
   - TextTag
-  - ArtciclePictureText
   - ArticleTitleTag
+  - ArticlePictureTag
+  - SubmitTag
   layers:
   - Default
   - TransparentFX
