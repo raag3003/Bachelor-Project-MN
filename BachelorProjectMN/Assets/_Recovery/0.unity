@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
   karmaScore: 3
-  HomeBase: {fileID: 1192284171}
+  HomeBase: {fileID: 835660962}
   SystemScript: {fileID: 519420033}
 --- !u!61 &157793869
 BoxCollider2D:
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 427126655}
   m_Layer: 0
   m_Name: Article
-  m_TagString: Untagged
+  m_TagString: ArticleTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,6 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   submitButton: {fileID: 1668091986}
+  isInSubmitArea: 0
 --- !u!61 &427126654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2534,7 +2535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1668091987
 MonoBehaviour:
   m_ObjectHideFlags: 0

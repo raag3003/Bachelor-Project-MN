@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
 
     public SystemScript SystemScript;
 
+
+    private bool isZoomedIn = false; // variable to keep track of whether the piece is currently zoomed in or not
     private bool isDragging = false;
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
 
@@ -18,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     private Vector3 lastKnownPosition; // Store the piece's last known position before returns to "home base"
 
     private Vector3 startRotation; // Store the piece's starting rotation so it can be reset when it goes back from home base
-    private Vector3 homeBaseRotation = new Vector3(0, 0, 90); // Store the rotation for the home base so it can be reset when it goes back to home base
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -94,7 +96,6 @@ public class PlayerScript : MonoBehaviour
     // At the moment, it is used to debug and make sure the piece gets unstuck from the current location 
     private void OnMouseDown()
     {
-        Debug.Log("Mouse pressed on gameobject: " + this.gameObject.name);
         currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
 
         if (isStuck)
@@ -110,6 +111,45 @@ public class PlayerScript : MonoBehaviour
 
                 SystemScript.RemovePiece(karmaScore); // Subtract the karma score of the piece from the total karma score in the SystemScript
             }
+        }
+    }
+
+    /* This function is called while the mouse is over the piece.
+     * we use this function to zoom into the piece to let it be more readable.
+     * We use the OnMouseOver function istead of OnMousedown since we want the player to use the right mouse button istead of the left mouse button
+     * Since OnMouseDown only works on left mouse button, we have to use OnMouseOver to detect the right mouse button click.
+     */
+    private void OnMouseOver()
+    {
+        // This entire function sould only do something if the player press the right mouse button while hovering over the piece. Otherwise, it should do nothing.
+        if (Input.GetMouseButtonDown(1)) // If the right mouse button is clicked while hovering over the piece, reset its position to home base
+        {
+            if (!isZoomedIn)
+            {
+                lastKnownPosition = transform.position; // Store the current position before zooming in so it can be reset when you zoom out
+            }
+                Debug.Log("Right button clicked on gameobject: " + this.gameObject.name);
+            
+            ZoomIn(isZoomedIn ? lastKnownPosition : transform.position); // Call the ZoomIn function to toggle between zooming in and out
+        }
+    }
+
+    private void ZoomIn(Vector3 _startPosition)
+    {
+        Vector3 zommedInPosition = Vector3.zero;
+        if (!isZoomedIn)
+        {
+            isZoomedIn = true;
+            transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
+            transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
+            transform.localScale = new Vector3(4.5f, 3f, 3f); // Zoom in on the piece by increasing its local scale
+        }
+        else
+        {
+            isZoomedIn = false;
+            transform.rotation = Quaternion.Euler(GetRandomRotation()); // Rotate the piece randomly when zooming out so it doesn't look the same as all the other pieces when it's back on the table
+            transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out
+            transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
         }
     }
 
@@ -143,6 +183,7 @@ public class PlayerScript : MonoBehaviour
     // If the piece is already at home base, it will move back to the last known position before it was reset.
     public void ResetPosition()
     {
+        Vector3 homeBaseRotation = new Vector3(0, 0, 90); // Store the rotation for the home base so it can be reset when it goes back to home base
         if (transform.position != HomeBase.transform.position && !isStuck)
         {
             lastKnownPosition = transform.position; // Store the current position before resetting

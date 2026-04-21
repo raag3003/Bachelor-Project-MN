@@ -4,6 +4,8 @@ public class ArticleScript : MonoBehaviour
 {
     public GameObject submitButton;
 
+    public bool isInSubmitArea = false; // Track whether the article is currently in the submit area
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,8 +38,8 @@ public class ArticleScript : MonoBehaviour
     {
         if (collision.CompareTag("SubmitTag"))
         {
+            isInSubmitArea = true; // Set the flag to true when the article enters the submit area
             Debug.Log("Article entered the submit area!"); // Debug log to confirm the collision is detected
-            submitButton.SetActive(true); // Show the submit button when the article collides with the submit area
         }
     }
 
@@ -45,8 +47,8 @@ public class ArticleScript : MonoBehaviour
     {
         if (collision.CompareTag("SubmitTag"))
         {
+            isInSubmitArea = false; // Set the flag to false when the article exits the submit area
             Debug.Log("Article left the submit area!"); // Debug log to confirm the collision exit is detected
-            submitButton.SetActive(false); // Hide the submit button when the article leaves the submit area
         }
     }
 

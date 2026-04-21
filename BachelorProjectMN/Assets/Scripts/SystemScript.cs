@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,12 +48,33 @@ public class SystemScript : MonoBehaviour
 
     public void SubmitArticle()
     {
-        if (piecesOnArticle != piecesNedded)
+        /*
+         * This is a failsafe to make sure that the player has the right amount of pieces on the article and that the article is in the submit area before they can submit it. 
+         */
+        ArticleScript article = GameObject.Find("ArticleTag").GetComponent<ArticleScript>();
+        if (!article.isInSubmitArea && piecesNedded == piecesOnArticle)
         {
+                submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området før du kan indsende den";
+                submitFailedText.SetActive(true);
+                submitFailedText.GetComponent<FailedSubmitScript>().KillMyself();
+                return;
+        }
+        else if (piecesOnArticle != piecesNedded && article.isInSubmitArea)
+        {
+            submitFailedText.GetComponent<Text>().text = "Du skal fylde alle sectioner af artiklen op før du kan vidersende den";
             submitFailedText.SetActive(true);
             submitFailedText.GetComponent<FailedSubmitScript>().KillMyself();
             return;
         }
+        else if (!article.isInSubmitArea && piecesOnArticle != piecesNedded)
+        {
+            submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området og fylde alle sectioner af artiklen op før du kan vidersende den";
+            submitFailedText.SetActive(true);
+            submitFailedText.GetComponent<FailedSubmitScript>().KillMyself();
+            return;
+        }
+
+
 
         /* Define the karma score thresholds for each category of article. These values can be adjusted as needed to fit the desired scoring system.
          If the karmaScore is between -... and -15 it is considered a horible article, between -14 and -7 it is considered a bad article, between -6 and 6 it is considered a neutral article,
