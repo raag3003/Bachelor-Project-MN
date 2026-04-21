@@ -12,6 +12,7 @@ TagManager:
   - ArticleTitleTag
   - ArticlePictureTag
   - SubmitTag
+  - ArticleTag
   layers:
   - Default
   - TransparentFX

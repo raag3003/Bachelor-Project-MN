@@ -51,7 +51,8 @@ public class SystemScript : MonoBehaviour
         /*
          * This is a failsafe to make sure that the player has the right amount of pieces on the article and that the article is in the submit area before they can submit it. 
          */
-        ArticleScript article = GameObject.Find("ArticleTag").GetComponent<ArticleScript>();
+        ArticleScript article = GameObject.FindGameObjectWithTag("ArticleTag").GetComponent<ArticleScript>();
+
         if (!article.isInSubmitArea && piecesNedded == piecesOnArticle)
         {
                 submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området før du kan indsende den";
