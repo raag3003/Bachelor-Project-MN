@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 0326df997b0f8a347afd68a59679f93a
+guid: e32e9c6f456b546468d0e0789da0bb8d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3264685265000905630
-    second: right-click-mouse-icon_0
+      213: 7296468314322948141
+    second: Mouse Right click icon_0
   - first:
-      213: 3741263110302810165
-    second: right-click-mouse-icon_1
+      213: -3844436940359361031
+    second: Mouse Right click icon_1
   - first:
-      213: 7123315083318874759
-    second: right-click-mouse-icon_2
+      213: -7778891502799792413
+    second: Mouse Right click icon_2
   - first:
-      213: 3379754555508351034
-    second: right-click-mouse-icon_3
+      213: 9095818037273300740
+    second: Mouse Right click icon_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: right-click-mouse-icon_0
+      name: Mouse Right click icon_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1
-        width: 659
-        height: 823
+        x: 773
+        y: 981
+        width: 44
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9bb4d393fd7e4d20800000000000000
-      internalID: 3264685265000905630
+      spriteID: d20dc160643424560800000000000000
+      internalID: 7296468314322948141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right-click-mouse-icon_1
+      name: Mouse Right click icon_1
       rect:
         serializedVersion: 2
-        x: 582
-        y: 757
-        width: 68
-        height: 98
+        x: 834
+        y: 942
+        width: 113
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5304fdc0af2abe330800000000000000
-      internalID: 3741263110302810165
+      spriteID: 9fd9d70b8f0d5aac0800000000000000
+      internalID: -3844436940359361031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right-click-mouse-icon_2
+      name: Mouse Right click icon_2
       rect:
         serializedVersion: 2
-        x: 680
-        y: 724
-        width: 102
-        height: 102
+        x: 908
+        y: 864
+        width: 158
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 782576cc3591bd260800000000000000
-      internalID: 7123315083318874759
+      spriteID: 3e6505d7463db0490800000000000000
+      internalID: -7778891502799792413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right-click-mouse-icon_3
+      name: Mouse Right click icon_3
       rect:
         serializedVersion: 2
-        x: 713
-        y: 625
-        width: 103
-        height: 69
+        x: 309
+        y: 160
+        width: 593
+        height: 804
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a30651d8cdc47ee20800000000000000
-      internalID: 3379754555508351034
+      spriteID: 40f044d2056da3e70800000000000000
+      internalID: 9095818037273300740
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      right-click-mouse-icon_0: 3264685265000905630
-      right-click-mouse-icon_1: 3741263110302810165
-      right-click-mouse-icon_2: 7123315083318874759
-      right-click-mouse-icon_3: 3379754555508351034
+      Mouse Right click icon_0: 7296468314322948141
+      Mouse Right click icon_1: -3844436940359361031
+      Mouse Right click icon_2: -7778891502799792413
+      Mouse Right click icon_3: 9095818037273300740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

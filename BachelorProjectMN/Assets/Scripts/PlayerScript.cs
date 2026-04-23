@@ -100,6 +100,7 @@ public class PlayerScript : MonoBehaviour
 
         if (isStuck)
         {
+            transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
             transform.rotation = Quaternion.Euler(startRotation);
 
             isStuck = false; // Make sure that when you click on the piece, it unsticks from the article so you can move it around again
@@ -139,6 +140,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 zommedInPosition = Vector3.zero;
         if (!isZoomedIn)
         {
+            isStuck = true; // Make sure the piece is stuck while it's zoomed in so it doesn't move around when you try to read it. It will be unstuck again when you zoom out.
             isZoomedIn = true;
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
             transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
@@ -146,6 +148,7 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
+            isStuck = false;
             isZoomedIn = false;
             transform.rotation = Quaternion.Euler(GetRandomRotation()); // Rotate the piece randomly when zooming out so it doesn't look the same as all the other pieces when it's back on the table
             transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out

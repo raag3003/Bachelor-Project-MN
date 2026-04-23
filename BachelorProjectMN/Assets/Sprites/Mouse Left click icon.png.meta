@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a15a388b0e4e4a140ae381755504273b
+guid: 1cf8ba4558deb3d4494d114be5d7258f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2534268333115564873
-    second: left-click-mouse-icon_0
+      213: -3971363255992834343
+    second: Mouse Left click icon_0
   - first:
-      213: -5693957152126569024
-    second: left-click-mouse-icon_1
+      213: -4472932223249126588
+    second: Mouse Left click icon_1
   - first:
-      213: 2173194763224720632
-    second: left-click-mouse-icon_2
+      213: -4429584868504999522
+    second: Mouse Left click icon_2
   - first:
-      213: -3368985482618548105
-    second: left-click-mouse-icon_3
+      213: -7577398391708273911
+    second: Mouse Left click icon_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: left-click-mouse-icon_0
+      name: Mouse Left click icon_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 724
-        width: 102
-        height: 102
+        x: 188
+        y: 864
+        width: 158
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 943efd03f978b2320800000000000000
-      internalID: 2534268333115564873
+      spriteID: 9d6228ce822e2e8c0800000000000000
+      internalID: -3971363255992834343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left-click-mouse-icon_1
+      name: Mouse Left click icon_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 1
-        width: 659
-        height: 823
+        x: 307
+        y: 942
+        width: 113
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c5733553200bf0b0800000000000000
-      internalID: -5693957152126569024
+      spriteID: 44b66d077d3fce1c0800000000000000
+      internalID: -4472932223249126588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left-click-mouse-icon_2
+      name: Mouse Left click icon_2
       rect:
         serializedVersion: 2
-        x: 190
-        y: 757
-        width: 68
-        height: 98
+        x: 437
+        y: 981
+        width: 44
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f4afb18f1db82e10800000000000000
-      internalID: 2173194763224720632
+      spriteID: e996052f704f682c0800000000000000
+      internalID: -4429584868504999522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left-click-mouse-icon_3
+      name: Mouse Left click icon_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 625
-        width: 103
-        height: 69
+        x: 352
+        y: 160
+        width: 593
+        height: 804
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 770d21f9d85fe31d0800000000000000
-      internalID: -3368985482618548105
+      spriteID: 903bc9c3f4ca7d690800000000000000
+      internalID: -7577398391708273911
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      left-click-mouse-icon_0: 2534268333115564873
-      left-click-mouse-icon_1: -5693957152126569024
-      left-click-mouse-icon_2: 2173194763224720632
-      left-click-mouse-icon_3: -3368985482618548105
+      Mouse Left click icon_0: -3971363255992834343
+      Mouse Left click icon_1: -4472932223249126588
+      Mouse Left click icon_2: -4429584868504999522
+      Mouse Left click icon_3: -7577398391708273911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
