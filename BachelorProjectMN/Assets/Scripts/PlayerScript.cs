@@ -35,8 +35,8 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if (isStuck)
-        {            
-            transform.position = currentStuckTarget.position; // Have the piece follow the article piece it's stuck to if it's currently stuck.
+        {
+            transform.position = new Vector3(currentStuckTarget.position.x, currentStuckTarget.position.y, 0); // Have the piece follow the article piece it's stuck to if it's currently stuck.
         }
     }
 
@@ -82,7 +82,7 @@ public class PlayerScript : MonoBehaviour
             // Get the transform for the article section that the piece is being dropped on so we can snap to it and follow it around when dragged
             currentStuckTarget = GameObject.FindGameObjectWithTag(currentHoverTag).GetComponent<Transform>();
             
-            transform.position = currentStuckTarget.position;
+            transform.position = new Vector3 (currentStuckTarget.position.x, currentStuckTarget.position.y, 0);
 
             // Disable the collider of the article piece so it doesn't interfere with dragging other pieces around
             currentStuckTarget.GetComponent<BoxCollider2D>().enabled = false;
