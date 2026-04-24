@@ -97,11 +97,15 @@ public class PlayerScript : MonoBehaviour
     private void OnMouseDown()
     {
         currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
-
+        if (isZoomedIn)
+        {
+            transform.rotation = Quaternion.Euler(GetRandomRotation()); // Reset the rotation to the original rotation before zooming in so it doesn't look weird when you try to move it around again
+            isZoomedIn = false; // Make sure the piece is not zoomed in when you click on it again so it doesn't look weird when you try to move it around again
+        }
         if (isStuck)
         {
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
-            transform.rotation = Quaternion.Euler(startRotation);
+            transform.rotation = Quaternion.Euler(GetRandomRotation());
 
             isStuck = false; // Make sure that when you click on the piece, it unsticks from the article so you can move it around again
             if (currentStuckTarget != null)
