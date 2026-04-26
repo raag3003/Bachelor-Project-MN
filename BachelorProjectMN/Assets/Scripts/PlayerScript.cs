@@ -1,4 +1,5 @@
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -10,8 +11,10 @@ public class PlayerScript : MonoBehaviour
     public SystemScript SystemScript;
 
     // These two sprites are for the zoom in and zoom out versions of the piece. They should be set in the inspector for each piece.
-    public Sprite ZoomedInSprite;
-    public Sprite DeafaultSprite;
+    [Header("Sprites")]
+    public Sprite ZoomedInSprite; // This sprite is for when the piece is zoomed in. It should be set in the inspector for each piece.
+    public Sprite DeafaultSprite; // This is the default sprite for the piece when it's not zoomed in. It should be set in the inspector for each piece.
+    public Sprite StuckSprite; // This sprite is for when the piece is stuck to an article piece. It should be set in the inspector for each piece.
 
 
     private bool isZoomedIn = false; // variable to keep track of whether the piece is currently zoomed in or not
@@ -22,7 +25,7 @@ public class PlayerScript : MonoBehaviour
     private Transform currentStuckTarget; // Store the transform of the article piece that the player piece is currently stuck to
 
     private Vector3 lastKnownPosition; // Store the piece's last known position before returns to "home base"
-
+    private Color originalColor;
     private Vector3 startRotation; // Store the piece's starting rotation so it can be reset when it goes back from home base
 
 
@@ -33,6 +36,8 @@ public class PlayerScript : MonoBehaviour
 
         startRotation = GetRandomRotation(); // Rotate the piece randomly on start so they don't all look the same when they spawn in
         transform.rotation = Quaternion.Euler(startRotation);
+
+        originalColor = this.gameObject.GetComponent<SpriteRenderer>().color; // Store the original color of the piece so it can be reset when zooming in and out
     }
 
     // Update is called once per frame
@@ -80,7 +85,10 @@ public class PlayerScript : MonoBehaviour
                 return; // Exit the function if it's not a valid drop location
             }
             isStuck = true; // Make sure that the piece is stuck so ResetPosition does not move it if pressed
-
+            
+            // Change the sprite to the stuck version of the piece when it snaps to the article piece so it looks better when it's on the article piece
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = StuckSprite; 
+            
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when it snaps to the article piece so it looks better when it's on the article piece
 
             // Get the transform for the article section that the piece is being dropped on so we can snap to it and follow it around when dragged
@@ -107,6 +115,9 @@ public class PlayerScript : MonoBehaviour
         }
         if (isStuck)
         {
+            // Change the sprite back to the default version of the piece when it gets unstuck so it looks better when it's on the table
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; 
+
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
             transform.rotation = Quaternion.Euler(GetRandomRotation());
 
@@ -152,16 +163,24 @@ public class PlayerScript : MonoBehaviour
         Vector3 zommedInPosition = Vector3.zero;
         if (!isZoomedIn)
         {
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder += 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when zooming in so it's easier to read
             this.gameObject.GetComponent<SpriteRenderer>().sprite = ZoomedInSprite; // Change the sprite to the zoomed in version of the piece when zooming in so it's easier to read
+            
             isZoomedIn = true;
+
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
             transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
             transform.localScale = new Vector3(4.5f, 3f, 3f); // Zoom in on the piece by increasing its local scale
         }
         else
         {
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
+            this.gameObject.GetComponent<SpriteRenderer>().color = originalColor; // Change the color back to the original color when zooming out
             this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; // Change the sprite back to the default version of the piece when zooming out
+
             isZoomedIn = false;
+
             transform.rotation = Quaternion.Euler(GetRandomRotation()); // Rotate the piece randomly when zooming out so it doesn't look the same as all the other pieces when it's back on the table
             transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
