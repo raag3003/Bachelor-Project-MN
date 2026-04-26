@@ -12,8 +12,8 @@ public class PlayerScript : MonoBehaviour
 
     // These two sprites are for the zoom in and zoom out versions of the piece. They should be set in the inspector for each piece.
     [Header("Sprites")]
-    public Sprite ZoomedInSprite; // This sprite is for when the piece is zoomed in. It should be set in the inspector for each piece.
     public Sprite DeafaultSprite; // This is the default sprite for the piece when it's not zoomed in. It should be set in the inspector for each piece.
+    public Sprite ZoomedInSprite; // This sprite is for when the piece is zoomed in. It should be set in the inspector for each piece.
     public Sprite StuckSprite; // This sprite is for when the piece is stuck to an article piece. It should be set in the inspector for each piece.
 
 
@@ -21,14 +21,14 @@ public class PlayerScript : MonoBehaviour
     private bool isDragging = false;
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
 
-    private string currentHoverTag = "";
+    private string currentHoverTag = null;
     private Transform currentStuckTarget; // Store the transform of the article piece that the player piece is currently stuck to
 
     private Vector3 lastKnownPosition; // Store the piece's last known position before returns to "home base"
     private Color originalColor;
     private Vector3 startRotation; // Store the piece's starting rotation so it can be reset when it goes back from home base
 
-    private string[] validTags = { "ArticleTitleTag", "ArticlePictureTag", "ArticleTextTag" }; // Define the valid tags for dropping the piece. This is used in multiple functions.
+    private readonly string[] validTags = { "ArticleTitleTag", "ArticlePictureTag", "ArticleTextTag" }; // Define the valid tags for dropping the piece. This is used in multiple functions.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,14 +45,15 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if (isStuck)
-        {
             transform.position = new Vector3(currentStuckTarget.position.x, currentStuckTarget.position.y, 0); // Have the piece follow the article piece it's stuck to if it's currently stuck.
-        }
+        
     }
 
 
-    // This function runs every frame while the mouse input = left mouse button is kept down
-    // We use this function to move the piecesb around on screen.
+    /// <summary>
+    /// This function runs every frame while the mouse input = left mouse button is kept down and is moving around
+    /// We use this function to move the pieces around on screen.
+    /// </summary>
     private void OnMouseDrag()
     {
         isDragging = true; 
@@ -71,8 +72,12 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-    // This function calls when the left mouse button is released
-    // We use this function to let the pieces go on the article sections
+    /// <summary>
+    /// This function calls when the left mouse button is released
+    /// We use this function to let the pieces go on the article sections
+    /// When the player drops the piece while hovering over a valid article section, it snaps to that section and becomes "stuck" to it so it follows the article around when it's dragged.
+    /// Otherwise it drops the piece on the table and skip the rest of the function.
+    /// </summary>
     void OnMouseUp()
     {
         isDragging = false;
@@ -103,8 +108,12 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    // This function is called when the left mouse button is pressed down on the object
-    // At the moment, it is used to debug and make sure the piece gets unstuck from the current location 
+    /// <summary>
+    /// This function is called when the left mouse button is pressed down on the object
+    /// The first thing it does is clear the currentHoverTag variable so it doesn't snap to the last hovered item when you pick it up again.
+    /// It then checks if the piece is currently zoomed in. If it is, it calls the ZoomIn function to zoom out before picking it up again.
+    /// If the piece is stuck to an article, it changes the sprite back to the default version of the piece and changes the color back to the original color so it looks better when it's on the table.
+    /// </summary>
     private void OnMouseDown()
     {
         currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
@@ -132,11 +141,12 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    /* This function is called while the mouse is over the piece.
-     * we use this function to zoom into the piece to let it be more readable.
-     * We use the OnMouseOver function istead of OnMousedown since we want the player to use the right mouse button istead of the left mouse button
-     * Since OnMouseDown only works on left mouse button, we have to use OnMouseOver to detect the right mouse button click.
-     */
+    /// <summary>
+    /// This function is called while the mouse is over the piece.
+    /// We use this function to zoom into the piece to let it be more readable.
+    /// We use the OnMouseOver function instead of OnMouseDown since we want the player to use the right mouse button instead of the left mouse button.
+    /// Since OnMouseDown only works on the left mouse button, we have to use OnMouseOver to detect the right mouse button click.
+    /// </summary>
     private void OnMouseOver()
     {
         // This entire function sould only do something if the player press the right mouse button while hovering over the piece. Otherwise, it should do nothing.
@@ -152,6 +162,15 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// We use this function to toggle between the zoomed in and zoomed out state for each piece
+    /// When zoomed in, the piece gets larger and changes sprite to represent the zoomed in version to make it readable.
+    /// This means that position, rotation and color changes so it gets centered.
+    /// </summary>
+    /// <param name="_startPosition">
+    /// _startPosition is the position that the piece should return to when zooming out. 
+    /// This is used to make sure that the piece returns to the same position it was in before zooming in, instead of returning to a default position which would look weird.
+    /// </param>
     private void ZoomIn(Vector3 _startPosition)
     {
         if (isStuck)
@@ -186,6 +205,12 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// OnTriggerEnter2D is used to make sure that when the piece being dragged is entering a trigger, it checks to see if it's a valid drop location
+    /// If it is a valid drop location, it changes the color of the drop location and changes the variable currentHoverTag -
+    /// to the tag of the drop location so it knows where to snap the piece when it's released in the OnMouseUp function.
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Make sure that the piece being dragged is always on top of the piece it's hovering over.
@@ -207,6 +232,10 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// OnTriggerExit2D is used for a simpel task. Change the color of the drop location back to its original color when the piece being dragged is no longer hovering over it.
+    /// And clear the current hover tag so it doesn't snap to the last hovered item when you drop it somewhere else on the table.
+    /// <param name="collision"></param>
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (validTags.Contains(collision.gameObject.tag))
@@ -224,8 +253,12 @@ public class PlayerScript : MonoBehaviour
        
     }
 
-    // This function is for the button that resets all pieces back to the "home base" position.
-    // If the piece is already at home base, it will move back to the last known position before it was reset.
+    /// <summary>
+    /// This function are connected with a button in the inspector. Each button is connected to all pieces of a specific type
+    /// When the button then is pressed, all pieces of that type will return to home base, or back onto the table if they are already at home base. 
+    /// This is used to make it easier for the player to get orriented with all the pieces. 
+    /// Otherwise the table would get crowded and it would be hard to find the pieces when you have moved them around a lot.
+    /// </summary>
     public void ResetPosition()
     {
         Vector3 homeBaseRotation = new Vector3(0, 0, 90); // Store the rotation for the home base so it can be reset when it goes back to home base
@@ -254,6 +287,11 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Simpel function used multiple times to get a semi-random rotation for the pieces.
+    /// Used at the start, back from homebase and back from being zoomed in.
+    /// This gives the game a more realistic and fluent feel instead of robust mathematical true orienations for the pieces. 
+    /// <returns>A Vector3 representing a random rotation for the piece.</returns>
     Vector3 GetRandomRotation() // Small Vector3 function to get a random rotation eachtime its reset from the pile
     { return new Vector3(0, 0, Random.Range(-15f, 15f)); }
 }
