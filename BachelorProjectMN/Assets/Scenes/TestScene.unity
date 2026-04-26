@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 16404123}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5214, y: -0.396, z: -0.27}
+  m_LocalPosition: {x: -1.52, y: -0.396, z: -0.27}
   m_LocalScale: {x: 1.4752961, y: 1.0434395, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -633,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0042, y: 0.001}
+  m_AnchoredPosition: {x: 0.0045399, y: 0.001}
   m_SizeDelta: {x: 0.9868, y: 0.9823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425094785
@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 968812401}
   m_Layer: 0
   m_Name: Zoomed Text
-  m_TagString: ArticleTextTag
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3018,7 +3018,7 @@ Transform:
   m_GameObject: {fileID: 2045586879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27, y: -0.45320857, z: 0}
+  m_LocalPosition: {x: 0.27, y: -0.45320857, z: 2}
   m_LocalScale: {x: 2.7, y: 2.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

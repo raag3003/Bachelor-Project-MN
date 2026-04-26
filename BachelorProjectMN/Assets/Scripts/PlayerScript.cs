@@ -35,8 +35,7 @@ public class PlayerScript : MonoBehaviour
     {
         SystemScript = SystemScript.GetComponent<SystemScript>();
 
-        startRotation = GetRandomRotation(); // Rotate the piece randomly on start so they don't all look the same when they spawn in
-        transform.rotation = Quaternion.Euler(startRotation);
+        ResetPosition(); // Call the ResetPosition function at the start to make sure that all pieces start at home base
 
         originalColor = this.gameObject.GetComponent<SpriteRenderer>().color; // Store the original color of the piece so it can be reset when zooming in and out
     }
@@ -100,6 +99,8 @@ public class PlayerScript : MonoBehaviour
             
             transform.position = new Vector3 (currentStuckTarget.position.x, currentStuckTarget.position.y, 0);
 
+            currentStuckTarget.gameObject.SetActive(false); // Remove the section so there is not an accidentel background
+
             // Disable the collider of the article piece so it doesn't interfere with dragging other pieces around
             currentStuckTarget.GetComponent<BoxCollider2D>().enabled = false;
 
@@ -133,7 +134,9 @@ public class PlayerScript : MonoBehaviour
             if (currentStuckTarget != null)
             {
                 currentStuckTarget.GetComponent<BoxCollider2D>().enabled = true; // Re-enable the collider of the article piece
-                               
+
+                currentStuckTarget.gameObject.SetActive(true); // Re-enable the article piece so it appears on the table again when you unstick the piece from it
+
                 currentStuckTarget = null;
 
                 SystemScript.RemovePiece(karmaScore); // Subtract the karma score of the piece from the total karma score in the SystemScript
@@ -276,6 +279,10 @@ public class PlayerScript : MonoBehaviour
 
             // disable the collider so the player cant drag it from home base while in home base
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else if (isStuck)
+        {
+            return; // Exit the function if the piece is currently stuck to an article piece since it shouldn't be able to go back to home base while it's stuck to an article piece
         }
         else
         {

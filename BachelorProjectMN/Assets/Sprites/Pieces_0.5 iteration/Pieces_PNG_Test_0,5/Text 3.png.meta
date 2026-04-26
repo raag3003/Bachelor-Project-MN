@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: fd6e1d0f1991bdb40be15d0da87b8755
+guid: 45c25ece8566fe74e8bbd7f6bde428eb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6114523046749164035
-    second: Aliens-er-landet_0
-  - first:
-      213: -638802793796699904
-    second: Aliens-er-landet_1
-  - first:
-      213: 2345394137087582281
-    second: Aliens-er-landet_2
-  - first:
-      213: -3477268502938557082
-    second: Aliens-er-landet_3
-  - first:
-      213: -6921334575764337910
-    second: Aliens-er-landet_4
+      213: 9112283443583552711
+    second: Text 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 425
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aliens-er-landet_0
+      name: Text 3_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 70
-        width: 202
-        height: 53
+        x: 0
+        y: 0
+        width: 1063
+        height: 798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfda3936fa9d42ba0800000000000000
-      internalID: -6114523046749164035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aliens-er-landet_1
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 70
-        width: 80
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 009783a5e348227f0800000000000000
-      internalID: -638802793796699904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aliens-er-landet_2
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 70
-        width: 209
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 940a36f8a838c8020800000000000000
-      internalID: 2345394137087582281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aliens-er-landet_3
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 13
-        width: 42
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66561bd48b24ebfc0800000000000000
-      internalID: -3477268502938557082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aliens-er-landet_4
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 2
-        width: 240
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0b00f7cfda72ff90800000000000000
-      internalID: -6921334575764337910
+      spriteID: 7cc88735385557e70800000000000000
+      internalID: 9112283443583552711
       vertices: []
       indices: 
       edges: []
@@ -235,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Aliens-er-landet_0: -6114523046749164035
-      Aliens-er-landet_1: -638802793796699904
-      Aliens-er-landet_2: 2345394137087582281
-      Aliens-er-landet_3: -3477268502938557082
-      Aliens-er-landet_4: -6921334575764337910
+      Text 3_0: 9112283443583552711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
