@@ -22,7 +22,7 @@ public class FailedSubmitScript : MonoBehaviour
 
     private IEnumerator DelayedKill()
     {
-        yield return new WaitForSeconds(3f); // Wait for 2 seconds
+        yield return new WaitForSeconds(4f); // Wait for 4 seconds
         this.gameObject.SetActive(false); // Deactivate the GameObject
     }
 }

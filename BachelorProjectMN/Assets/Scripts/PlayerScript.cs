@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour
     private Color originalColor;
     private Vector3 startRotation; // Store the piece's starting rotation so it can be reset when it goes back from home base
 
+    private string[] validTags = { "ArticleTitleTag", "ArticlePictureTag", "ArticleTextTag" }; // Define the valid tags for dropping the piece. This is used in multiple functions.
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,17 +79,15 @@ public class PlayerScript : MonoBehaviour
         // If the article piece is released while hovering over a valid tag, snap it to that position
         if (!string.IsNullOrEmpty(currentHoverTag))
         {
-            string[] validTags = { "ArticleTitleTag", "ArticlePictureTag", "ArticleTextTag" }; // Define the valid tags for dropping the piece
             if (!validTags.Contains(currentHoverTag))
-            {
-                Debug.Log("Invalid drop location. Please drop the piece on an article piece.");
                 return; // Exit the function if it's not a valid drop location
-            }
+            
             isStuck = true; // Make sure that the piece is stuck so ResetPosition does not move it if pressed
             
             // Change the sprite to the stuck version of the piece when it snaps to the article piece so it looks better when it's on the article piece
             this.gameObject.GetComponent<SpriteRenderer>().sprite = StuckSprite; 
-            
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when it snaps to the article piece so it's easier to read
+
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when it snaps to the article piece so it looks better when it's on the article piece
 
             // Get the transform for the article section that the piece is being dropped on so we can snap to it and follow it around when dragged
@@ -110,13 +109,13 @@ public class PlayerScript : MonoBehaviour
     {
         currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
         if (isZoomedIn)
-        {
             ZoomIn(lastKnownPosition); // If the piece is currently zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
-        }
+        
         if (isStuck)
         {
             // Change the sprite back to the default version of the piece when it gets unstuck so it looks better when it's on the table
             this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; 
+            this.gameObject.GetComponent<SpriteRenderer>().color = originalColor; // Change the color back to the original color when it gets unstuck so it looks better when it's on the table
 
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
             transform.rotation = Quaternion.Euler(GetRandomRotation());
@@ -196,6 +195,13 @@ public class PlayerScript : MonoBehaviour
             // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
             currentHoverTag = collision.gameObject.tag;
 
+            if (validTags.Contains(currentHoverTag))
+            {
+                // Change the color of the article piece to a semi-transparant green when hovering over it to indicate that it's a valid drop location
+                collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 0.35f); 
+            }
+            
+
             // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         }
@@ -203,7 +209,12 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Exited trigger with gameobject: " + collision.gameObject.name);
+        if (validTags.Contains(collision.gameObject.tag))
+        {
+            // Change the color of the article piece to red when no longer hovering over it to indicate that it's not a valid drop location
+            collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f);
+        }
+
         if (!isStuck)
         {
             // Clear the current hover tag since it's no longer hovering over it
