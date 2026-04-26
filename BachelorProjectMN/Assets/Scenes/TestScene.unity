@@ -1074,8 +1074,8 @@ MonoBehaviour:
   karmaScore: 3
   HomeBase: {fileID: 0}
   SystemScript: {fileID: 0}
-  ZoomedInSprite: {fileID: 21300000, guid: a1891fd5e1f274647baff86e97d0b228, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: a1891fd5e1f274647baff86e97d0b228, type: 3}
   StuckSprite: {fileID: 21300000, guid: dd8901ecc53e360408c591f9306ec16e, type: 3}
 --- !u!61 &888631308
 BoxCollider2D:
@@ -1231,8 +1231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.727, y: -0.8}
-  m_SizeDelta: {x: 8.6821, y: 2.5516}
+  m_AnchoredPosition: {x: -0.0046, y: -0.1388}
+  m_SizeDelta: {x: 3.3888, y: 0.6549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911869895
 MonoBehaviour:
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 5.1759768, w: 2.098779}
+  m_margin: {x: 0, y: 0, z: 0.06862223, w: -0.021020055}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -1732,8 +1732,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5393499, y: -0.96005905}
-  m_SizeDelta: {x: 6.2946, y: 0.6531}
+  m_AnchoredPosition: {x: -0.8222, y: -0.6563}
+  m_SizeDelta: {x: 1.9214, y: 0.2163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305127239
 MonoBehaviour:
@@ -2032,8 +2032,8 @@ MonoBehaviour:
   karmaScore: 3
   HomeBase: {fileID: 0}
   SystemScript: {fileID: 0}
-  ZoomedInSprite: {fileID: 21300000, guid: fd6e1d0f1991bdb40be15d0da87b8755, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: fd6e1d0f1991bdb40be15d0da87b8755, type: 3}
   StuckSprite: {fileID: 21300000, guid: 3905db4a4b53b5144abc32c00f6767f7, type: 3}
 --- !u!61 &1722508500
 BoxCollider2D:
@@ -2217,8 +2217,8 @@ MonoBehaviour:
   karmaScore: -3
   HomeBase: {fileID: 0}
   SystemScript: {fileID: 0}
-  ZoomedInSprite: {fileID: 21300000, guid: 6fe3bdd7410338f4c8b4c5c12c04b938, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: 6fe3bdd7410338f4c8b4c5c12c04b938, type: 3}
   StuckSprite: {fileID: 21300000, guid: 9779e091930c6394b84f6fdcd4bd51be, type: 3}
 --- !u!61 &1825169738
 BoxCollider2D:
@@ -2465,8 +2465,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.727, y: -0.44}
-  m_SizeDelta: {x: 8.6821, y: 2.5516}
+  m_AnchoredPosition: {x: 0.0502, y: 0.0526}
+  m_SizeDelta: {x: 3.7855, y: 1.1384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858855950
 MonoBehaviour:
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 5.1759768, w: 2.098779}
+  m_margin: {x: 0, y: 0, z: -0.030546427, w: -0.058209896}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -3041,8 +3041,8 @@ MonoBehaviour:
   karmaScore: 3
   HomeBase: {fileID: 0}
   SystemScript: {fileID: 0}
-  ZoomedInSprite: {fileID: 21300000, guid: f5a1e0551e247fa4ba0c0c0c28b0cabb, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: f5a1e0551e247fa4ba0c0c0c28b0cabb, type: 3}
   StuckSprite: {fileID: 21300000, guid: 05afd4ed0594ec8478d6209b93be0f0b, type: 3}
 --- !u!61 &2096606248
 BoxCollider2D:
