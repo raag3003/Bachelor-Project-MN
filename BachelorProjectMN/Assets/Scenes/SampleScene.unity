@@ -212,8 +212,8 @@ MonoBehaviour:
   karmaScore: 3
   HomeBase: {fileID: 835660962}
   SystemScript: {fileID: 519420033}
-  ZoomedInSprite: {fileID: 21300000, guid: f5a1e0551e247fa4ba0c0c0c28b0cabb, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: f5a1e0551e247fa4ba0c0c0c28b0cabb, type: 3}
   StuckSprite: {fileID: 21300000, guid: 05afd4ed0594ec8478d6209b93be0f0b, type: 3}
 --- !u!61 &157793869
 BoxCollider2D:
@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 157793866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1, y: 4.07, z: 0}
+  m_LocalPosition: {x: -1.63, y: 3.69, z: 0}
   m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1551,11 +1551,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 3
+  karmaScore: -10
   HomeBase: {fileID: 123376143}
   SystemScript: {fileID: 519420033}
-  ZoomedInSprite: {fileID: 21300000, guid: fd6e1d0f1991bdb40be15d0da87b8755, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: fd6e1d0f1991bdb40be15d0da87b8755, type: 3}
   StuckSprite: {fileID: 21300000, guid: 3905db4a4b53b5144abc32c00f6767f7, type: 3}
 --- !u!61 &1329954033
 BoxCollider2D:
@@ -1832,8 +1832,8 @@ MonoBehaviour:
   karmaScore: 3
   HomeBase: {fileID: 123376143}
   SystemScript: {fileID: 519420033}
-  ZoomedInSprite: {fileID: 21300000, guid: a1891fd5e1f274647baff86e97d0b228, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: a1891fd5e1f274647baff86e97d0b228, type: 3}
   StuckSprite: {fileID: 21300000, guid: dd8901ecc53e360408c591f9306ec16e, type: 3}
 --- !u!50 &1383949592
 Rigidbody2D:
@@ -2376,11 +2376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -3
+  karmaScore: -10
   HomeBase: {fileID: 689317486}
   SystemScript: {fileID: 519420033}
-  ZoomedInSprite: {fileID: 21300000, guid: 6fe3bdd7410338f4c8b4c5c12c04b938, type: 3}
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  ZoomedInSprite: {fileID: 21300000, guid: 6fe3bdd7410338f4c8b4c5c12c04b938, type: 3}
   StuckSprite: {fileID: 21300000, guid: 9779e091930c6394b84f6fdcd4bd51be, type: 3}
 --- !u!50 &1773828216
 Rigidbody2D:
@@ -2867,6 +2867,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2435190837087607350, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398225054766421172, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369282945841568256, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Size.x
+      value: 5.069887
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369282945841568256, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Size.y
+      value: 2.589985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369282945841568256, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0059325695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369282945841568256, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.011865556
+      objectReference: {fileID: 0}
     - target: {fileID: 5939130634052843570, guid: b9b32e619513f5242837477633864fd6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2914,6 +2938,22 @@ PrefabInstance:
     - target: {fileID: 6435314435657954161, guid: b9b32e619513f5242837477633864fd6, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131729128051690235, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131729128051690235, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131729128051690235, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131729128051690235, guid: b9b32e619513f5242837477633864fd6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8428117177878414575, guid: b9b32e619513f5242837477633864fd6, type: 3}
       propertyPath: submitButton
