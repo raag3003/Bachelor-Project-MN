@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     private bool isZoomedIn = false; // variable to keep track of whether the piece is currently zoomed in or not
     private bool isDragging = false;
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
+    private bool mouseOver = false; // variable to make sure that the right mouse button only works when hovering over the piece, otherwise it would work no matter where you are on the screen which would look weird
 
     private string currentHoverTag = null;
     private Transform currentStuckTarget; // Store the transform of the article piece that the player piece is currently stuck to
@@ -43,6 +44,16 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse1) && mouseOver)
+        {
+            Debug.Log("Right mouse button pressed");
+            ZoomIn(lastKnownPosition); // If the right mouse button is clicked while the piece is zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse1) && isZoomedIn)
+        {
+            ZoomIn(lastKnownPosition); // If the right mouse button is clicked while the piece is zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
+        }
+
         if (isStuck)
             transform.position = new Vector3(currentStuckTarget.position.x, currentStuckTarget.position.y, 0); // Have the piece follow the article piece it's stuck to if it's currently stuck.
         
@@ -145,24 +156,70 @@ public class PlayerScript : MonoBehaviour
     }
 
     /// <summary>
-    /// This function is called while the mouse is over the piece.
-    /// We use this function to zoom into the piece to let it be more readable.
-    /// We use the OnMouseOver function instead of OnMouseDown since we want the player to use the right mouse button instead of the left mouse button.
-    /// Since OnMouseDown only works on the left mouse button, we have to use OnMouseOver to detect the right mouse button click.
+    /// These 2 functions are used to set the mouseOver variable to true when the mouse is over the piece and false when it's no longer over the piece.
+    /// Then in Update() we can zoom in and out
+    /// We can only zoom in if the mouse is currently over the piece, otherwise it would work no matter where you are on the screen which would look weird.
     /// </summary>
     private void OnMouseOver()
     {
-        // This entire function sould only do something if the player press the right mouse button while hovering over the piece. Otherwise, it should do nothing.
-        if (Input.GetMouseButtonDown(1)) // If the right mouse button is clicked while hovering over the piece, reset its position to home base
+        mouseOver = true; // Set the mouseOver variable to true when the mouse is over the piece so the right mouse button only works when hovering over the piece
+    }
+    private void OnMouseExit()
+    {
+        mouseOver = false; // Set the mouseOver variable to false when the mouse is no longer over the piece so the right mouse button only works when hovering over the piece
+    }
+
+    /// <summary>
+    /// OnTriggerEnter2D is used to make sure that when the piece being dragged is entering a trigger, it checks to see if it's a valid drop location
+    /// If it is a valid drop location, it changes the color of the drop location and changes the variable currentHoverTag -
+    /// to the tag of the drop location so it knows where to snap the piece when it's released in the OnMouseUp function.
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Make sure that the piece being dragged is always on top of the piece it's hovering over.
+        // Otherwise 2 different pieces with same script will be on top of each other and it will look weird.
+        if (isDragging && !isStuck)
         {
-            if (!isZoomedIn)
-            {
-                lastKnownPosition = transform.position; // Store the current position before zooming in so it can be reset when you zoom out
-            }
-                Debug.Log("Right button clicked on gameobject: " + this.gameObject.name);
+            if (!validTags.Contains(collision.gameObject.tag))
+                return; // Exit the function if it's not a valid drop location
             
-            ZoomIn(isZoomedIn ? lastKnownPosition : transform.position); // Call the ZoomIn function to toggle between zooming in and out
+            if (validTags.Contains(collision.gameObject.tag))
+            {
+                // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
+                currentHoverTag = collision.gameObject.tag;
+                // Change the color of the article piece to a semi-transparant green when hovering over it to indicate that it's a valid drop location
+                collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 0.35f); 
+            }
+            
+
+            // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
+
+            Debug.Log("Entered trigger with tag: " + collision.gameObject.tag);
+            Debug.Log("Current hover tag: " + currentHoverTag);
         }
+    }
+
+    /// <summary>
+    /// OnTriggerExit2D is used for a simpel task. Change the color of the drop location back to its original color when the piece being dragged is no longer hovering over it.
+    /// And clear the current hover tag so it doesn't snap to the last hovered item when you drop it somewhere else on the table.
+    /// <param name="collision"></param>
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (validTags.Contains(collision.gameObject.tag))
+        {
+            // Change the color of the article piece to red when no longer hovering over it to indicate that it's not a valid drop location
+            collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f);
+        }
+
+        if (!isStuck)
+        {
+            // Clear the current hover tag since it's no longer hovering over it
+            // Otherwise the piece would snap back to the last hovered item no matter where you drop it.
+            currentHoverTag = null;
+        }
+       
     }
 
     /// <summary>
@@ -187,7 +244,7 @@ public class PlayerScript : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder += 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when zooming in so it's easier to read
             this.gameObject.GetComponent<SpriteRenderer>().sprite = ZoomedInSprite; // Change the sprite to the zoomed in version of the piece when zooming in so it's easier to read
-            
+
             isZoomedIn = true;
 
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
@@ -206,54 +263,6 @@ public class PlayerScript : MonoBehaviour
             transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
         }
-    }
-
-    /// <summary>
-    /// OnTriggerEnter2D is used to make sure that when the piece being dragged is entering a trigger, it checks to see if it's a valid drop location
-    /// If it is a valid drop location, it changes the color of the drop location and changes the variable currentHoverTag -
-    /// to the tag of the drop location so it knows where to snap the piece when it's released in the OnMouseUp function.
-    /// </summary>
-    /// <param name="collision"></param>
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Make sure that the piece being dragged is always on top of the piece it's hovering over.
-        // Otherwise 2 different pieces with same script will be on top of each other and it will look weird.
-        if (isDragging && !isStuck)
-        {
-            // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
-            currentHoverTag = collision.gameObject.tag;
-
-            if (validTags.Contains(currentHoverTag))
-            {
-                // Change the color of the article piece to a semi-transparant green when hovering over it to indicate that it's a valid drop location
-                collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 0.35f); 
-            }
-            
-
-            // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
-        }
-    }
-
-    /// <summary>
-    /// OnTriggerExit2D is used for a simpel task. Change the color of the drop location back to its original color when the piece being dragged is no longer hovering over it.
-    /// And clear the current hover tag so it doesn't snap to the last hovered item when you drop it somewhere else on the table.
-    /// <param name="collision"></param>
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (validTags.Contains(collision.gameObject.tag))
-        {
-            // Change the color of the article piece to red when no longer hovering over it to indicate that it's not a valid drop location
-            collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f);
-        }
-
-        if (!isStuck)
-        {
-            // Clear the current hover tag since it's no longer hovering over it
-            // Otherwise the piece would snap back to the last hovered item no matter where you drop it.
-            currentHoverTag = null;
-        }
-       
     }
 
     /// <summary>
