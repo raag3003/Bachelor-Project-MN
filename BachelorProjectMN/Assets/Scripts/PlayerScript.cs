@@ -47,6 +47,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) && mouseOver)
         {
             Debug.Log("Right mouse button pressed");
+            lastKnownPosition = transform.position; // Store the current position before zooming in so it doesn't look weird when you zoom out
             ZoomIn(lastKnownPosition); // If the right mouse button is clicked while the piece is zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
         }
         else if (Input.GetKeyDown(KeyCode.Mouse1) && isZoomedIn)
@@ -233,6 +234,11 @@ public class PlayerScript : MonoBehaviour
     /// </param>
     private void ZoomIn(Vector3 _startPosition)
     {
+        if (isDragging)
+        {
+            Debug.Log("Cannot zoom in while dragging the piece. Please release the piece first by releasing the left mouse button.");
+            return; // Exit the function if the piece is currently being dragged
+        }
         if (isStuck)
         {
             Debug.Log("Cannot zoom in while the piece is stuck to an article piece. Please unstick the piece first by clicking on it again.");
