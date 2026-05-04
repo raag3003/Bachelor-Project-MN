@@ -244,7 +244,7 @@ public class PlayerScript : MonoBehaviour
             Debug.Log("Cannot zoom in while the piece is stuck to an article piece. Please unstick the piece first by clicking on it again.");
             return; // Exit the function if the piece is currently stuck to an article piece
         }
-        Vector3 zommedInPosition = Vector3.zero;
+        Vector3 zommedInPosition = new Vector3(5f, 3f, 0f);
         if (!isZoomedIn)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder += 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
@@ -255,7 +255,7 @@ public class PlayerScript : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
             transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
-            transform.localScale = new Vector3(4.5f, 3f, 3f); // Zoom in on the piece by increasing its local scale
+            transform.localScale = new Vector3(3.7f, 2.2f, 2.2f); // Zoom in on the piece by increasing its local scale
         }
         else
         {

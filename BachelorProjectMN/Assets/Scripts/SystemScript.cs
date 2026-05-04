@@ -19,6 +19,11 @@ public class SystemScript : MonoBehaviour
     public int piecesOnArticle = 0; // How many pices are on the article right now
     private int piecesNedded = 3; // How many pieces are needed to submit this article
 
+    private void Start()
+    {
+        submitSection.SetActive(false);
+    }
+
     public void AddPiece(int _karmaValue)
     {
         karmaScore += _karmaValue;
