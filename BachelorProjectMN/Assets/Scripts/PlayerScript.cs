@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    [Header("Piece Settings")]
     [SerializeField, Range(-10, 10)]
     public int karmaScore = 0;
     public GameObject HomeBase;
+    public GameObject ZoomArea;
+    private Component ZoomAreaSpriteComponent;
 
     public SystemScript SystemScript;
+    private ZoomAreaScript ZoomAreaScript;
 
     // These two sprites are for the zoom in and zoom out versions of the piece. They should be set in the inspector for each piece.
     [Header("Sprites")]
@@ -17,10 +21,9 @@ public class PlayerScript : MonoBehaviour
     public Sprite StuckSprite; // This sprite is for when the piece is stuck to an article piece. It should be set in the inspector for each piece.
 
 
-    private bool isZoomedIn = false; // variable to keep track of whether the piece is currently zoomed in or not
     private bool isDragging = false;
     private bool isStuck = false; // variable to make sure that once the piece is stuck, it follows the article around when it's dragged
-    private bool mouseOver = false; // variable to make sure that the right mouse button only works when hovering over the piece, otherwise it would work no matter where you are on the screen which would look weird
+    private bool mouseOver = false; // variable to make sure that the right mouse button only works when hovering over the piece
 
     private string currentHoverTag = null;
     private Transform currentStuckTarget; // Store the transform of the article piece that the player piece is currently stuck to
@@ -36,6 +39,8 @@ public class PlayerScript : MonoBehaviour
     {
         SystemScript = SystemScript.GetComponent<SystemScript>();
 
+        ZoomAreaScript = ZoomArea.GetComponent<ZoomAreaScript>();
+
         ResetPosition(); // Call the ResetPosition function at the start to make sure that all pieces start at home base
 
         originalColor = this.gameObject.GetComponent<SpriteRenderer>().color; // Store the original color of the piece so it can be reset when zooming in and out
@@ -48,11 +53,7 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("Right mouse button pressed");
             lastKnownPosition = transform.position; // Store the current position before zooming in so it doesn't look weird when you zoom out
-            ZoomIn(lastKnownPosition); // If the right mouse button is clicked while the piece is zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse1) && isZoomedIn)
-        {
-            ZoomIn(lastKnownPosition); // If the right mouse button is clicked while the piece is zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
+            ZoomIn(); // If the right mouse button is clicked while the piece is zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
         }
 
         if (isStuck)
@@ -130,9 +131,7 @@ public class PlayerScript : MonoBehaviour
     private void OnMouseDown()
     {
         currentHoverTag = ""; // Clear the current hover tag since we are picking up the piece again
-        if (isZoomedIn)
-            ZoomIn(lastKnownPosition); // If the piece is currently zoomed in, zoom out before picking it up again so it doesn't look weird when you pick it up
-        
+         
         if (isStuck)
         {
             // Change the sprite back to the default version of the piece when it gets unstuck so it looks better when it's on the table
@@ -232,43 +231,45 @@ public class PlayerScript : MonoBehaviour
     /// _startPosition is the position that the piece should return to when zooming out. 
     /// This is used to make sure that the piece returns to the same position it was in before zooming in, instead of returning to a default position which would look weird.
     /// </param>
-    private void ZoomIn(Vector3 _startPosition)
+    private void ZoomIn()
     {
-        if (isDragging)
-        {
-            Debug.Log("Cannot zoom in while dragging the piece. Please release the piece first by releasing the left mouse button.");
-            return; // Exit the function if the piece is currently being dragged
-        }
-        if (isStuck)
-        {
-            Debug.Log("Cannot zoom in while the piece is stuck to an article piece. Please unstick the piece first by clicking on it again.");
-            return; // Exit the function if the piece is currently stuck to an article piece
-        }
-        Vector3 zommedInPosition = new Vector3(5f, 3f, 0f);
-        if (!isZoomedIn)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder += 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when zooming in so it's easier to read
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = ZoomedInSprite; // Change the sprite to the zoomed in version of the piece when zooming in so it's easier to read
+        ZoomAreaScript.ZoomIn(ZoomedInSprite, true); // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
 
-            isZoomedIn = true;
+        /* if (isDragging)
+         {
+             Debug.Log("Cannot zoom in while dragging the piece. Please release the piece first by releasing the left mouse button.");
+             return; // Exit the function if the piece is currently being dragged
+         }
+         if (isStuck)
+         {
+             Debug.Log("Cannot zoom in while the piece is stuck to an article piece. Please unstick the piece first by clicking on it again.");
+             return; // Exit the function if the piece is currently stuck to an article piece
+         }
+         Vector3 zommedInPosition = new Vector3(5f, 3f, 0f);
+         if (!isZoomedIn)
+         {
+             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder += 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
+             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when zooming in so it's easier to read
+             this.gameObject.GetComponent<SpriteRenderer>().sprite = ZoomedInSprite; // Change the sprite to the zoomed in version of the piece when zooming in so it's easier to read
 
-            transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
-            transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
-            transform.localScale = new Vector3(3.7f, 2.2f, 2.2f); // Zoom in on the piece by increasing its local scale
-        }
-        else
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
-            this.gameObject.GetComponent<SpriteRenderer>().color = originalColor; // Change the color back to the original color when zooming out
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; // Change the sprite back to the default version of the piece when zooming out
+             isZoomedIn = true;
 
-            isZoomedIn = false;
+             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
+             transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
+             transform.localScale = new Vector3(3.7f, 2.2f, 2.2f); // Zoom in on the piece by increasing its local scale
+         }
+         else
+         {
+             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
+             this.gameObject.GetComponent<SpriteRenderer>().color = originalColor; // Change the color back to the original color when zooming out
+             this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; // Change the sprite back to the default version of the piece when zooming out
 
-            transform.rotation = Quaternion.Euler(GetRandomRotation()); // Rotate the piece randomly when zooming out so it doesn't look the same as all the other pieces when it's back on the table
-            transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out
-            transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
-        }
+             isZoomedIn = false;
+
+             transform.rotation = Quaternion.Euler(GetRandomRotation()); // Rotate the piece randomly when zooming out so it doesn't look the same as all the other pieces when it's back on the table
+             transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out
+             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
+         }*/ // Old zoom method
     }
 
     /// <summary>
@@ -279,13 +280,11 @@ public class PlayerScript : MonoBehaviour
     /// </summary>
     public void ResetPosition()
     {
+        ZoomAreaScript.ZoomIn(null, false); // Call the ZoomIn function in the ZoomAreaScript and pass null and false to reset the zoom area
+
         Vector3 homeBaseRotation = new Vector3(0, 0, 90); // Store the rotation for the home base so it can be reset when it goes back to home base
         if (transform.position != HomeBase.transform.position && !isStuck)
         {
-            if (isZoomedIn)
-            {
-                ZoomIn(lastKnownPosition); // If the piece is currently zoomed in, zoom out before resetting the position so it doesn't look weird when it goes back to home base
-            }
             lastKnownPosition = transform.position; // Store the current position before resetting
             transform.position = HomeBase.transform.position;
             isStuck = false;

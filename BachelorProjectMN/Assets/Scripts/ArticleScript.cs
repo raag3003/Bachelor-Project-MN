@@ -14,6 +14,7 @@ public class ArticleScript : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        submitButton.SetActive(false); // Ensure the submit button is hidden at the start
     }
 
     // Update is called once per frame
@@ -52,6 +53,14 @@ public class ArticleScript : MonoBehaviour
         Debug.Log("Mouse down on article! Initial mouse position: " + mouseWorld); // Debug log to confirm the mouse down event is detected
     }
 
+    private void OnMouseUp()
+    {
+        if (isInSubmitArea)
+        {
+            submitButton.SetActive(true); // Show the submit button when the article is released in the submit area
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("SubmitTag"))
@@ -65,6 +74,7 @@ public class ArticleScript : MonoBehaviour
     {
         if (collision.CompareTag("SubmitTag"))
         {
+            submitButton.SetActive(false); // Hide the submit button when the article leaves the submit area
             isInSubmitArea = false; // Set the flag to false when the article exits the submit area
             Debug.Log("Article left the submit area!"); // Debug log to confirm the collision exit is detected
         }
