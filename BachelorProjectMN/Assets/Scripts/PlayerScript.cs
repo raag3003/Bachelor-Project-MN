@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     public SystemScript SystemScript;
     private ZoomAreaScript ZoomAreaScript;
 
+    public string pieceFactsText; // This is the text that will be shown in the fakta box when the piece is zoomed in. It should be set in the inspector for each piece.
+
     // These two sprites are for the zoom in and zoom out versions of the piece. They should be set in the inspector for each piece.
     [Header("Sprites")]
     public Sprite DeafaultSprite; // This is the default sprite for the piece when it's not zoomed in. It should be set in the inspector for each piece.
@@ -233,7 +235,9 @@ public class PlayerScript : MonoBehaviour
     /// </param>
     private void ZoomIn()
     {
-        ZoomAreaScript.ZoomIn(ZoomedInSprite, true); // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
+        // Set the current zoomedObjectTag in the ZoomAreaScript to this tag. Then it only zooms out if it is the same type of piece that is currently zoomed in
+        ZoomAreaScript.currentZoomedObjectTag = this.gameObject.tag; 
+        ZoomAreaScript.ZoomIn(ZoomedInSprite, true, pieceFactsText); // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
 
         /* if (isDragging)
          {
@@ -280,7 +284,9 @@ public class PlayerScript : MonoBehaviour
     /// </summary>
     public void ResetPosition()
     {
-        ZoomAreaScript.ZoomIn(null, false); // Call the ZoomIn function in the ZoomAreaScript and pass null and false to reset the zoom area
+        if (ZoomAreaScript.currentZoomedObjectTag == this.gameObject.tag)
+            ZoomAreaScript.ZoomIn(null, false, ""); // Call the ZoomIn function in the ZoomAreaScript and pass null and false to reset the zoom area
+        
 
         Vector3 homeBaseRotation = new Vector3(0, 0, 90); // Store the rotation for the home base so it can be reset when it goes back to home base
         if (transform.position != HomeBase.transform.position && !isStuck)
