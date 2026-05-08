@@ -119,6 +119,98 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2264145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2264146}
+  - component: {fileID: 2264149}
+  - component: {fileID: 2264148}
+  - component: {fileID: 2264147}
+  m_Layer: 5
+  m_Name: FaktaBoxText
+  m_TagString: FaktaBoxTag
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2264146
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.66, y: 2.66, z: 2.66}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 616422410}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 750, y: -80}
+  m_SizeDelta: {x: 151.8488, y: 83.222}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2264147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8680c435c8fbe0a47b08501772d5c029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &2264148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: f4eec857a4fdf2f43be0e9f3d1a984e7, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: FaktaBoks
+--- !u!222 &2264149
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264145}
+  m_CullTransparentMesh: 1
 --- !u!1 &38381805
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +289,7 @@ MonoBehaviour:
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: cb816c5fcf1ba164085a52ce53f6396c, type: 3}
   StuckSprite: {fileID: 21300000, guid: cb816c5fcf1ba164085a52ce53f6396c, type: 3}
@@ -524,6 +617,7 @@ MonoBehaviour:
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 3112393147318026678, guid: 66879818349407747bb685e3fb38c2e2, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: e5b46628c3ca6ff4fbb82d5533bbfba7, type: 3}
   StuckSprite: {fileID: 21300000, guid: e5b46628c3ca6ff4fbb82d5533bbfba7, type: 3}
@@ -1303,6 +1397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b31da0497d6bbf4598db2db700e15a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  factsText: {fileID: 2264148}
+  currentZoomedObjectTag: 
 --- !u!212 &564060434
 SpriteRenderer:
   serializedVersion: 2
@@ -1542,6 +1638,7 @@ RectTransform:
   - {fileID: 1668091990}
   - {fileID: 1192284172}
   - {fileID: 1984420237}
+  - {fileID: 2264146}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1738,6 +1835,7 @@ MonoBehaviour:
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 41aae1cf5d7f35348b90968caf035cb9, type: 3}
   StuckSprite: {fileID: 21300000, guid: 41aae1cf5d7f35348b90968caf035cb9, type: 3}
@@ -1955,6 +2053,7 @@ MonoBehaviour:
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 1e13960289594994095b554ce3c450ef, type: 3}
   StuckSprite: {fileID: 21300000, guid: 1e13960289594994095b554ce3c450ef, type: 3}
@@ -2141,6 +2240,7 @@ MonoBehaviour:
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: d80eedfda11b925439014dc12535267e, type: 3}
   StuckSprite: {fileID: 21300000, guid: d80eedfda11b925439014dc12535267e, type: 3}
@@ -3444,6 +3544,7 @@ MonoBehaviour:
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 5402186393299254529, guid: 8962d9b348ad8ad4cb266baf9351694f, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: bb1664b9deeedf443a284b404758cb86, type: 3}
   StuckSprite: {fileID: 21300000, guid: bb1664b9deeedf443a284b404758cb86, type: 3}
@@ -3645,6 +3746,7 @@ MonoBehaviour:
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: c2c4137b712609d4f9ee52cd553892bb, type: 3}
   StuckSprite: {fileID: 21300000, guid: c2c4137b712609d4f9ee52cd553892bb, type: 3}
@@ -3909,6 +4011,8 @@ MonoBehaviour:
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: "Denne titel er sand. Flere kilder er generalt hvilket er mere
+    trov\xE6rdigt"
   DeafaultSprite: {fileID: 3112393147318026678, guid: 66879818349407747bb685e3fb38c2e2, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: dd5f034d0476eed4caadf477d3605e1e, type: 3}
   StuckSprite: {fileID: 21300000, guid: dd5f034d0476eed4caadf477d3605e1e, type: 3}
@@ -4416,6 +4520,7 @@ MonoBehaviour:
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 6d63f4e540a7d644daa1d36790f9c31d, type: 3}
   StuckSprite: {fileID: 21300000, guid: 6d63f4e540a7d644daa1d36790f9c31d, type: 3}
@@ -5059,6 +5164,7 @@ MonoBehaviour:
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 5402186393299254529, guid: 8962d9b348ad8ad4cb266baf9351694f, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 7bea688ec7b07244da7fcdf26bf881d9, type: 3}
   StuckSprite: {fileID: 21300000, guid: 7bea688ec7b07244da7fcdf26bf881d9, type: 3}
@@ -5534,6 +5640,7 @@ MonoBehaviour:
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 45c25ece8566fe74e8bbd7f6bde428eb, type: 3}
   StuckSprite: {fileID: 21300000, guid: 45c25ece8566fe74e8bbd7f6bde428eb, type: 3}
@@ -5836,6 +5943,7 @@ MonoBehaviour:
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
+  pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: edd867dc976875d42988faea20443c59, type: 3}
   StuckSprite: {fileID: 21300000, guid: edd867dc976875d42988faea20443c59, type: 3}

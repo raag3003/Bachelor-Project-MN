@@ -13,6 +13,7 @@ TagManager:
   - ArticlePictureTag
   - SubmitTag
   - ArticleTag
+  - FaktaBoxTag
   layers:
   - Default
   - TransparentFX
