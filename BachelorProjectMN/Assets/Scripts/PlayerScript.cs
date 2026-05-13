@@ -31,7 +31,6 @@ public class PlayerScript : MonoBehaviour
     private Transform currentStuckTarget; // Store the transform of the article piece that the player piece is currently stuck to
 
     private Vector3 lastKnownPosition; // Store the piece's last known position before returns to "home base"
-    private Color originalColor;
     private Vector3 startRotation; // Store the piece's starting rotation so it can be reset when it goes back from home base
 
     private readonly string[] validTags = { "ArticleTitleTag", "ArticlePictureTag", "ArticleTextTag" }; // Define the valid tags for dropping the piece. This is used in multiple functions.
@@ -44,8 +43,6 @@ public class PlayerScript : MonoBehaviour
         ZoomAreaScript = ZoomArea.GetComponent<ZoomAreaScript>();
 
         ResetPosition(); // Call the ResetPosition function at the start to make sure that all pieces start at home base
-
-        originalColor = this.gameObject.GetComponent<SpriteRenderer>().color; // Store the original color of the piece so it can be reset when zooming in and out
     }
 
     // Update is called once per frame
@@ -138,7 +135,6 @@ public class PlayerScript : MonoBehaviour
         {
             // Change the sprite back to the default version of the piece when it gets unstuck so it looks better when it's on the table
             this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; 
-            this.gameObject.GetComponent<SpriteRenderer>().color = originalColor; // Change the color back to the original color when it gets unstuck so it looks better when it's on the table
 
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
             transform.rotation = Quaternion.Euler(GetRandomRotation());
@@ -253,7 +249,7 @@ public class PlayerScript : MonoBehaviour
             ZoomAreaScript.ZoomIn(null, false, ""); // Call the ZoomIn function in the ZoomAreaScript and pass null and false to reset the zoom area
         
 
-        Vector3 homeBaseRotation = new Vector3(0, 0, 90); // Store the rotation for the home base so it can be reset when it goes back to home base
+        Vector3 homeBaseRotation = new Vector3(0, 0, 73); // Store the rotation for the home base so it can be reset when it goes back to home base
         if (transform.position != HomeBase.transform.position && !isStuck)
         {
             lastKnownPosition = transform.position; // Store the current position before resetting
@@ -285,6 +281,6 @@ public class PlayerScript : MonoBehaviour
     /// This gives the game a more realistic and fluent feel instead of robust mathematical true orienations for the pieces. 
     /// <returns>A Vector3 representing a random rotation for the piece.</returns>
     Vector3 GetRandomRotation() // Small Vector3 function to get a random rotation eachtime its reset from the pile
-    { return new Vector3(0, 0, Random.Range(-15f, 15f)); }
+    { return new Vector3(0, 0, Random.Range(-30f, 10f)); }
 }
 
