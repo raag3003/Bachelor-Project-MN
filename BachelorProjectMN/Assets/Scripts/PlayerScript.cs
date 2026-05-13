@@ -236,44 +236,9 @@ public class PlayerScript : MonoBehaviour
     private void ZoomIn()
     {
         // Set the current zoomedObjectTag in the ZoomAreaScript to this tag. Then it only zooms out if it is the same type of piece that is currently zoomed in
-        ZoomAreaScript.currentZoomedObjectTag = this.gameObject.tag; 
-        ZoomAreaScript.ZoomIn(ZoomedInSprite, true, pieceFactsText); // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
-
-        /* if (isDragging)
-         {
-             Debug.Log("Cannot zoom in while dragging the piece. Please release the piece first by releasing the left mouse button.");
-             return; // Exit the function if the piece is currently being dragged
-         }
-         if (isStuck)
-         {
-             Debug.Log("Cannot zoom in while the piece is stuck to an article piece. Please unstick the piece first by clicking on it again.");
-             return; // Exit the function if the piece is currently stuck to an article piece
-         }
-         Vector3 zommedInPosition = new Vector3(5f, 3f, 0f);
-         if (!isZoomedIn)
-         {
-             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder += 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
-             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when zooming in so it's easier to read
-             this.gameObject.GetComponent<SpriteRenderer>().sprite = ZoomedInSprite; // Change the sprite to the zoomed in version of the piece when zooming in so it's easier to read
-
-             isZoomedIn = true;
-
-             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when zooming in so it looks better when it's zoomed in
-             transform.position = zommedInPosition; // Move the piece to the center of the screen when zooming in so it's easier to read
-             transform.localScale = new Vector3(3.7f, 2.2f, 2.2f); // Zoom in on the piece by increasing its local scale
-         }
-         else
-         {
-             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder -= 100; // Set the sorting order to a high value so it appears on top of all the other pieces when zoomed in
-             this.gameObject.GetComponent<SpriteRenderer>().color = originalColor; // Change the color back to the original color when zooming out
-             this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; // Change the sprite back to the default version of the piece when zooming out
-
-             isZoomedIn = false;
-
-             transform.rotation = Quaternion.Euler(GetRandomRotation()); // Rotate the piece randomly when zooming out so it doesn't look the same as all the other pieces when it's back on the table
-             transform.position = _startPosition; // Reset the position to the original position before zooming in so it doesn't look weird when you zoom out
-             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
-         }*/ // Old zoom method
+        ZoomAreaScript.currentZoomedObjectTag = this.gameObject.tag;
+        // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
+        ZoomAreaScript.ZoomIn(ZoomedInSprite, true, pieceFactsText); 
     }
 
     /// <summary>
