@@ -607,7 +607,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 3112393147318026678, guid: 66879818349407747bb685e3fb38c2e2, type: 3}
   ZoomedInSprite: {fileID: 3791747777051124951, guid: f09285542afea8d4e8995b4a94ce89e8, type: 3}
-  StuckSprite: {fileID: 3791747777051124951, guid: f09285542afea8d4e8995b4a94ce89e8, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &233352039
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: edd867dc976875d42988faea20443c59, type: 3}
-  StuckSprite: {fileID: 21300000, guid: edd867dc976875d42988faea20443c59, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &250836084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 5402186393299254529, guid: 8962d9b348ad8ad4cb266baf9351694f, type: 3}
   ZoomedInSprite: {fileID: -6678656094114473908, guid: 609b150b41277764a8b76102dcf5b224, type: 3}
-  StuckSprite: {fileID: -6678656094114473908, guid: 609b150b41277764a8b76102dcf5b224, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &324498307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 7697338375257655586, guid: d772ac2f5f259584ca081827f24d6a51, type: 3}
   ZoomedInSprite: {fileID: -376382599408826607, guid: 1ce08b70f86586d4a9aac089763af407, type: 3}
-  StuckSprite: {fileID: -376382599408826607, guid: 1ce08b70f86586d4a9aac089763af407, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 5377550092542254330, guid: 2a07170f5fafed04d81d7eba54360d26, type: 3}
 --- !u!50 &348092818
 Rigidbody2D:
   serializedVersion: 5
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 41aae1cf5d7f35348b90968caf035cb9, type: 3}
-  StuckSprite: {fileID: 21300000, guid: 41aae1cf5d7f35348b90968caf035cb9, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &416932893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,7 +2215,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 3112393147318026678, guid: 66879818349407747bb685e3fb38c2e2, type: 3}
   ZoomedInSprite: {fileID: 805710825329452237, guid: 57eb97273f7c00149bccb959cf15b2c3, type: 3}
-  StuckSprite: {fileID: 805710825329452237, guid: 57eb97273f7c00149bccb959cf15b2c3, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &653049963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3535,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 7697338375257655586, guid: d772ac2f5f259584ca081827f24d6a51, type: 3}
   ZoomedInSprite: {fileID: 3624014258220071091, guid: 449fefd642a4b35479f96106cce2cce1, type: 3}
-  StuckSprite: {fileID: 3624014258220071091, guid: 449fefd642a4b35479f96106cce2cce1, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: -5794546649582838439, guid: f106beff312de8e48a16d3291795e03a, type: 3}
 --- !u!1 &1071919257
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,7 +4055,7 @@ MonoBehaviour:
     trov\xE6rdigt"
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 7801019876851494424, guid: 873ee9593c9f5d5438f4cd9766e8669e, type: 3}
-  StuckSprite: {fileID: 7801019876851494424, guid: 873ee9593c9f5d5438f4cd9766e8669e, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 7615690843191339487, guid: 8ace309b882ce054588ae3ffacdc4b21, type: 3}
 --- !u!1 &1138171162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5522,7 +5522,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 1684962094825528891, guid: 96fe88abe7b76254a82ff0cbc9ac72c7, type: 3}
-  StuckSprite: {fileID: 1684962094825528891, guid: 96fe88abe7b76254a82ff0cbc9ac72c7, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: -7124101791586755906, guid: 62b117eae449213409740e5682f19e1a, type: 3}
 --- !u!1 &1689141984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,7 +5562,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 5402186393299254529, guid: 8962d9b348ad8ad4cb266baf9351694f, type: 3}
   ZoomedInSprite: {fileID: -2316485976797364606, guid: 52d0e8fa4f428bc41a3de99f38d1cba6, type: 3}
-  StuckSprite: {fileID: -2316485976797364606, guid: 52d0e8fa4f428bc41a3de99f38d1cba6, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!50 &1689141986
 Rigidbody2D:
   serializedVersion: 5
@@ -5749,7 +5749,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: 1e13960289594994095b554ce3c450ef, type: 3}
-  StuckSprite: {fileID: 21300000, guid: 1e13960289594994095b554ce3c450ef, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!50 &1734739415
 Rigidbody2D:
   serializedVersion: 5
@@ -6400,7 +6400,7 @@ MonoBehaviour:
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 21300000, guid: d80eedfda11b925439014dc12535267e, type: 3}
-  StuckSprite: {fileID: 21300000, guid: d80eedfda11b925439014dc12535267e, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &2066091664
 GameObject:
   m_ObjectHideFlags: 0
