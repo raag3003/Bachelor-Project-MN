@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1ce08b70f86586d4a9aac089763af407
+guid: 62b117eae449213409740e5682f19e1a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -376382599408826607
-    second: Lav middel_0
+      213: -7124101791586755906
+    second: Sandheden Zoom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lav middel_0
+      name: Sandheden Zoom_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1047
-        height: 106
+        width: 620
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 117499e1502d6caf0800000000000000
-      internalID: -376382599408826607
+      spriteID: eba5fb86a2b122d90800000000000000
+      internalID: -7124101791586755906
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lav middel_0: -376382599408826607
+      Sandheden Zoom_0: -7124101791586755906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     [Header("Sprites")]
     public Sprite DeafaultSprite; // This is the default sprite for the piece when it's not zoomed in. It should be set in the inspector for each piece.
     public Sprite ZoomedInSprite; // This sprite is for when the piece is zoomed in. It should be set in the inspector for each piece.
-    public Sprite StuckSprite; // This sprite is for when the piece is stuck to an article piece. It should be set in the inspector for each piece.
+    public Sprite ZoomedInSprite_ONLY_FOR_TITLE; // This sprite is for when the piece is zoomed in and it's a title. It should be set in the inspector for each piece.
 
 
     private bool isDragging = false;
@@ -38,6 +38,8 @@ public class PlayerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        this.gameObject.GetComponent<BoxCollider2D>().size = this.gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+
         SystemScript = SystemScript.GetComponent<SystemScript>();
 
         ZoomAreaScript = ZoomArea.GetComponent<ZoomAreaScript>();
@@ -101,9 +103,10 @@ public class PlayerScript : MonoBehaviour
             isStuck = true; // Make sure that the piece is stuck so ResetPosition does not move it if pressed
             
             // Change the sprite to the stuck version of the piece when it snaps to the article piece so it looks better when it's on the article piece
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = StuckSprite; 
-            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white; // Change the color to white when it snaps to the article piece so it's easier to read
-
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = ZoomedInSprite;
+            // Change the collider size to match the new sprite size when it snaps to the article piece so it looks better when it's on the article piece
+            this.gameObject.GetComponent<BoxCollider2D>().size = this.gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size; 
+            
             transform.rotation = Quaternion.Euler(0, 0, 0); // Reset the rotation to 0 when it snaps to the article piece so it looks better when it's on the article piece
 
             // Get the transform for the article section that the piece is being dropped on so we can snap to it and follow it around when dragged
@@ -134,7 +137,9 @@ public class PlayerScript : MonoBehaviour
         if (isStuck)
         {
             // Change the sprite back to the default version of the piece when it gets unstuck so it looks better when it's on the table
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite; 
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = DeafaultSprite;
+            // Change the collider size to match the new sprite size when it snaps to the article piece so it looks better when it's on the article piece
+            this.gameObject.GetComponent<BoxCollider2D>().size = this.gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
 
             transform.localScale = new Vector3(1.5f, 1f, 1); // Reset the scale to normal
             transform.rotation = Quaternion.Euler(GetRandomRotation());
@@ -234,7 +239,10 @@ public class PlayerScript : MonoBehaviour
         // Set the current zoomedObjectTag in the ZoomAreaScript to this tag. Then it only zooms out if it is the same type of piece that is currently zoomed in
         ZoomAreaScript.currentZoomedObjectTag = this.gameObject.tag;
         // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
-        ZoomAreaScript.ZoomIn(ZoomedInSprite, true, pieceFactsText); 
+        if (this.gameObject.tag == "ArticleTitleTag")
+            ZoomAreaScript.ZoomIn(ZoomedInSprite_ONLY_FOR_TITLE, true, pieceFactsText); // If the piece is a title, use the title version of the zoomed in sprite since it looks better when zoomed in
+        else
+            ZoomAreaScript.ZoomIn(ZoomedInSprite, true, pieceFactsText); 
     }
 
     /// <summary>
