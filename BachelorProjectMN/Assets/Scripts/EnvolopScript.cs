@@ -8,6 +8,10 @@ public class EnvolopScript : MonoBehaviour
 
     public GameObject ChangeGameObject; // Assign this in the Unity Inspector with the GameObject representing the zoomed-in view
 
+    private void Start()
+    {
+        transform.rotation = Quaternion.Euler(GetRandomRotation()); // Reset the rotation to a random rotation
+    }
     private void OnMouseOver()
     {
         Hovering = true;
@@ -54,4 +58,7 @@ public class EnvolopScript : MonoBehaviour
         if (isDragging)
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
     }
+
+    public Vector3 GetRandomRotation() // Small Vector3 function to get a random rotation eachtime its reset from the pile
+    { return new Vector3(0, 0, Random.Range(-10f, 10f)); }
 }

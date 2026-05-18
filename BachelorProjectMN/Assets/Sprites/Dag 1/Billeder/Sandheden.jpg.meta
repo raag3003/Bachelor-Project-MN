@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a8d2a80dabaf4c4db68a5bb6a022c1d
+guid: 40172d0099eacb8498b0704fc5af8db0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1340341099413836060
-    second: "Dag1_H\xF8j_Midt_0"
+      213: 1684962094825528891
+    second: Sandheden_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 395
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Dag1_H\xF8j_Midt_0"
+      name: Sandheden_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 742
-        height: 493
+        width: 537
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4eee49b1fd6266de0800000000000000
-      internalID: -1340341099413836060
+      spriteID: b3ed2121910326710800000000000000
+      internalID: 1684962094825528891
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 53f697ab08ae6f746bb96309cdf0807d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Dag1_H\xF8j_Midt_0": -1340341099413836060
+      Sandheden_0: 1684962094825528891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
