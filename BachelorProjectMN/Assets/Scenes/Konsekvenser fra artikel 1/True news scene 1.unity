@@ -6523,6 +6523,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 993647106}
     m_Modifications:
+    - target: {fileID: 502689265962255222, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
+      propertyPath: m_text
+      value: "PS. F\xE5 styr p\xE5 din s\xF8sters konvolutter. Der ligger en mere
+        p\xE5 dit bord, men det kan v\xE6re det er den sidste."
+      objectReference: {fileID: 0}
     - target: {fileID: 665866623614534927, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6603,13 +6608,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 997486038795548296, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
+      propertyPath: m_text
+      value: "REKRUT!!!!!\nHer i NEK har vi ingen tolorance for l\xF8gn i vores artikler.
+        Korrupt politi?! Hvad t\xE6nker du p\xE5?!\n\nIkke desto mindre.  S\xE5 har
+        i bestyrelsen besluttet at give dig en chance mere og fort\xE6lle folket
+        den rigtige historie der for stoppet disse un\xF8dvendige demonstrationer
+        du uden tvilv har h\xF8rt om.\n\nVores indre efterforskings i firmaet har
+        ogs\xE5 opdaget nogle potientielle mulvapper. Vi fort\xE6ller n\xE6rmere
+        n\xE5r vi ved mere. Du skal bare skrive den rigtige historie herfra.\n\nG\xF8r
+        dit arbejde. Hilsen NEK og staten"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352676986115181501, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
+      propertyPath: m_text
+      value: Dag 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4792322263681072638, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
       propertyPath: m_Name
       value: Start day paper
       objectReference: {fileID: 0}
     - target: {fileID: 4792322263681072638, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570740356164925644, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6693,6 +6717,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Envolop text
       objectReference: {fileID: 0}
+    - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 519.182
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 66.1099
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 563.4092
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -365.945
+      objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6772,6 +6816,15 @@ PrefabInstance:
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_text
+      value: "Fantastiske rekrut\n\nVi er super glade for dit valg om at fort\xE6lle
+        befolkningen sandheden. Befolkningen tror p\xE5 det og er begyndt at g\xE5
+        p\xE5 gaden for at presse staten til at svarer p\xE5 alle deres sp\xF8rgsm\xE5l.\n\nDesv\xE6rre
+        skubber politiet tilbage igen ved brug af vold. Folk bliver n\xF8dt til at
+        h\xF8rer hvor forf\xE6rdligt politiet behandler de fredelige demonstranter\n\nVi
+        tror p\xE5 dig\n\nViva la revulation - Modstandstyrken"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,6 +10,7 @@ public class EnvolopTextScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) // Check if Space key is pressed while zooming
         {
             ChangeGameObject.SetActive(true); // Cahgne GameObject to show the envolop
+            ChangeGameObject.transform.rotation = Quaternion.Euler(ChangeGameObject.GetComponent<EnvolopScript>().GetRandomRotation()); // Reset the rotation to a random rotation
             this.gameObject.SetActive(false); // Reactivate the current GameObject
         }
     }

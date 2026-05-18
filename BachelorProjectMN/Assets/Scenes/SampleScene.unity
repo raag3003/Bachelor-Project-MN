@@ -289,7 +289,7 @@ MonoBehaviour:
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne udtaelse h\xE6lder mod at politiet gjorde sin pligt "
   DeafaultSprite: {fileID: 5402186393299254529, guid: 8962d9b348ad8ad4cb266baf9351694f, type: 3}
   ZoomedInSprite: {fileID: -7621222714254121981, guid: 82e386fee473a1b4fbd87ff968036f20, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -563,6 +563,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -679,14 +691,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 10
+  karmaScore: 7
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne titel fort\xE6ller hvad der reelt skete"
   DeafaultSprite: {fileID: 7697338375257655586, guid: d772ac2f5f259584ca081827f24d6a51, type: 3}
   ZoomedInSprite: {fileID: 5096954696887823884, guid: 553e1590a75639d47ad218c357bff463, type: 3}
-  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: -2664872812165398171, guid: 97d2ac88b11be5a419b0312a031a720b, type: 3}
 --- !u!61 &157793869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4163,14 +4175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -5
+  karmaScore: -3
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne titel n\xE6rmer sig fake news. Ikke hele statens sandhed"
   DeafaultSprite: {fileID: 7697338375257655586, guid: d772ac2f5f259584ca081827f24d6a51, type: 3}
   ZoomedInSprite: {fileID: -972559225763555572, guid: ac850fe7b666e0b44a58f5985fa09b96, type: 3}
-  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 3379176493556280195, guid: 8f11a044be3f5964794e2365ed24867b, type: 3}
 --- !u!61 &1329954033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4365,11 +4377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 3
+  karmaScore: -5
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne udtaelse n\xE6rmer sig statens sandhed"
   DeafaultSprite: {fileID: 5402186393299254529, guid: 8962d9b348ad8ad4cb266baf9351694f, type: 3}
   ZoomedInSprite: {fileID: -5709231502185686218, guid: fa487d3a2d448a441bd08ee47cefbfe9, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -4630,15 +4642,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 3
+  karmaScore: -6
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: "Denne titel er sand. Flere kilder er generalt hvilket er mere
-    trov\xE6rdigt"
+  pieceFactsText: 'Denne titel holder sig til statens sandhed. '
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 8337158856834287630, guid: 2a2ece950ff65404c963a76ed7f37c4a, type: 3}
-  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 2193232880369387818, guid: a4ec4356c39790e4fabc1f8d3a6861ee, type: 3}
 --- !u!50 &1383949592
 Rigidbody2D:
   serializedVersion: 5
@@ -5785,11 +5796,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -3
+  karmaScore: 10
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne udtaelse n\xE6vner hvordan politiet virkelig er imod befolkningen "
   DeafaultSprite: {fileID: 3112393147318026678, guid: 66879818349407747bb685e3fb38c2e2, type: 3}
   ZoomedInSprite: {fileID: -1146586360932003477, guid: 4720b9dd19e9f26488ef66e4c6d45b78, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -6429,14 +6440,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -10
+  karmaScore: 3
   HomeBase: {fileID: 123376143}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne titel n\xE6rmer sig sandheden"
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: -5837604383340111024, guid: 31e9f9c245b3c384ca214d4157f802d8, type: 3}
-  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 4040707788505857083, guid: 42adeedb288ce6049b269e706fcd6235, type: 3}
 --- !u!50 &1773828216
 Rigidbody2D:
   serializedVersion: 5
@@ -6905,11 +6916,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 10
+  karmaScore: 5
   HomeBase: {fileID: 835660962}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
-  pieceFactsText: 
+  pieceFactsText: "Denne udtaelse n\xE6rmer sig sandheden om hvordan politiet opf\xF8rer
+    sig imod befolkningen"
   DeafaultSprite: {fileID: 3112393147318026678, guid: 66879818349407747bb685e3fb38c2e2, type: 3}
   ZoomedInSprite: {fileID: -1340341099413836060, guid: 3a8d2a80dabaf4c4db68a5bb6a022c1d, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -8136,6 +8148,6 @@ SceneRoots:
   - {fileID: 273399004}
   - {fileID: 1730812006}
   - {fileID: 1825502600}
-  - {fileID: 127150747}
   - {fileID: 838525745}
   - {fileID: 1558075370}
+  - {fileID: 127150747}
