@@ -1022,6 +1022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Envolop text
       objectReference: {fileID: 0}
+    - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2159,13 +2163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -3
+  karmaScore: 10
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: 41aae1cf5d7f35348b90968caf035cb9, type: 3}
+  ZoomedInSprite: {fileID: 1684962094825528891, guid: 2c079b94b04ba594bbec5e8b42fb30c2, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!61 &651171940
 BoxCollider2D:
@@ -2468,13 +2472,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 10
+  karmaScore: -10
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: 1e13960289594994095b554ce3c450ef, type: 3}
+  ZoomedInSprite: {fileID: -7994730005845227420, guid: 476323061d0ab144abb921e626f4c141, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!61 &697959978
 BoxCollider2D:
@@ -2655,14 +2659,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 3
+  karmaScore: -5
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: d80eedfda11b925439014dc12535267e, type: 3}
-  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
+  ZoomedInSprite: {fileID: 8528680064372519124, guid: 1f19f8b2482b23543b291aab59dd7240, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 8528680064372519124, guid: 1f19f8b2482b23543b291aab59dd7240, type: 3}
 --- !u!61 &702095953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6845,13 +6849,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -10
+  karmaScore: 4
   HomeBase: {fileID: 689317486}
   ZoomArea: {fileID: 564060431}
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: edd867dc976875d42988faea20443c59, type: 3}
+  ZoomedInSprite: {fileID: 2411321948929614469, guid: c697ccbbcf86cd648b3a4ca213675d81, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!61 &2064509098
 BoxCollider2D:

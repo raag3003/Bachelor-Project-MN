@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 2c079b94b04ba594bbec5e8b42fb30c2
+guid: 5aebad0d29b6dfe4c9a0bb0a696a4edd
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1684962094825528891
-    second: Sandheden_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -47,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 2
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 575
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,18 +102,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 450
-        height: 450
+        width: 650
+        height: 652
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b3ed2121910326710800000000000000
-      internalID: 1684962094825528891
+      spriteID: 7cc798c69830d1948ba72246a715e15c
+      internalID: 1590756944
       vertices: []
       indices: 
       edges: []
@@ -125,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5dd10013549a74c46bc48113e81d85b6
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sandheden_0: 1684962094825528891
+      Sandheden_0: 1590756944
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

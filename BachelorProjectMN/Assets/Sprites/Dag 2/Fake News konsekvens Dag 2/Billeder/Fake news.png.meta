@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2c079b94b04ba594bbec5e8b42fb30c2
+guid: 9fad4362bac0feb45a57ea91351d2421
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1684962094825528891
-    second: Sandheden_0
+      213: 7801019876851494424
+    second: Fake news_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sandheden_0
+      name: Fake news_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 450
-        height: 450
+        width: 492
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3ed2121910326710800000000000000
-      internalID: 1684962094825528891
+      spriteID: 81eae751f3ac24c60800000000000000
+      internalID: 7801019876851494424
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sandheden_0: 1684962094825528891
+      Fake news_0: 7801019876851494424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

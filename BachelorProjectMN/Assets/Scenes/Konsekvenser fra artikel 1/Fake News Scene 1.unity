@@ -878,13 +878,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -10
+  karmaScore: -5
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: edd867dc976875d42988faea20443c59, type: 3}
+  ZoomedInSprite: {fileID: 7801019876851494424, guid: 98e74012ffa797c4598bab8976378142, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &250836084
 GameObject:
@@ -1904,13 +1904,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: -3
+  karmaScore: 5
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: 41aae1cf5d7f35348b90968caf035cb9, type: 3}
+  ZoomedInSprite: {fileID: 3624014258220071091, guid: a8bbf0a8f13babd4385af56f01bd13c0, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &416932893
 GameObject:
@@ -3016,12 +3016,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.78225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.07265
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 6.1887
       objectReference: {fileID: 0}
     - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -2.0903
       objectReference: {fileID: 0}
     - target: {fileID: 2156099838599483835, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6564,7 +6572,7 @@ MonoBehaviour:
   SystemScript: {fileID: 1207697174}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: 1e13960289594994095b554ce3c450ef, type: 3}
+  ZoomedInSprite: {fileID: 1684962094825528891, guid: 3c5535ed3c85dd54b8a71e0098a7cd90, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!50 &1734739415
 Rigidbody2D:
@@ -7656,13 +7664,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a70626c90d8814ba4f8b53d29c9482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
-  karmaScore: 3
+  karmaScore: -10
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 21300000, guid: d80eedfda11b925439014dc12535267e, type: 3}
+  ZoomedInSprite: {fileID: 7801019876851494424, guid: 9fad4362bac0feb45a57ea91351d2421, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1 &2066091664
 GameObject:
