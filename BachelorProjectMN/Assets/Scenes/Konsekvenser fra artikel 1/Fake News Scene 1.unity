@@ -1952,6 +1952,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Envolop text
       objectReference: {fileID: 0}
+    - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2031,6 +2039,16 @@ PrefabInstance:
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_text
+      value: "REKRUT!!!!!\n\nVi stolede p\xE5 dig. Vi gav dig alle de beviser vi
+        havde for at f\xE5 det korrupte politi ned med nakken.\nMen nu er de stadig
+        p\xE5 fri fod og befolkningen kender ikke til dem.\n\nDu f\xE5r en chance
+        mere. \nVore efterforskning viser at statens st\xF8rste politiske modstander
+        er blevet sat for mordet af sin egen kone. I hvirkeligheden er det korrupte
+        politi der har dr\xE6bt hende og lagt alle beviserne over p\xE5 politikeren.\n\nH\xE5ber
+        du g\xF8r det rigtige denne gang.\nViva la revolation - Modstandsstyrken"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6305,7 +6323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4792322263681072638, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
