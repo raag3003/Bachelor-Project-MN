@@ -6,7 +6,7 @@ public class WindowPersonWalking : MonoBehaviour
     GameObject leftSpawn;
     GameObject rightSpawn;
     public bool walkingDirection = true;
-    public float moveSpeed = 0.006f;
+    private float moveSpeed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +14,8 @@ public class WindowPersonWalking : MonoBehaviour
         animator = GetComponent<Animator>();
         leftSpawn = GameObject.FindGameObjectWithTag("WindowBorderLeft");
         rightSpawn = GameObject.FindGameObjectWithTag("WindowBorderRight");
+
+        moveSpeed = Random.Range(0.005f, 0.008f);
 
         if (!walkingDirection)
         {
