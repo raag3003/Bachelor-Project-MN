@@ -609,7 +609,7 @@ PrefabInstance:
     - target: {fileID: 5968192965563921929, guid: cdc1eb296c5ed264ca3198dd9bd64a26, type: 3}
       propertyPath: ChangeGameObject
       value: 
-      objectReference: {fileID: 2041275357}
+      objectReference: {fileID: 159671992}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -807,6 +807,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1955674079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &159671992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
+  m_PrefabInstance: {fileID: 457849115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &273399002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,10 +1009,6 @@ PrefabInstance:
     - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Name
       value: Envolop text
-      objectReference: {fileID: 0}
-    - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
@@ -6166,11 +6167,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
---- !u!1 &2041275357 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4792322263681072638, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
-  m_PrefabInstance: {fileID: 2041275356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2041275358 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 665866623614534927, guid: 8889eb9bd54f0484bb4625743958eedb, type: 3}
