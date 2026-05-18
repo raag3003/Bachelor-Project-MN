@@ -17,12 +17,6 @@ public class ArticleScript : MonoBehaviour
         submitButton.SetActive(false); // Ensure the submit button is hidden at the start
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDrag()
     {
         // Get the main camera
