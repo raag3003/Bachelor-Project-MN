@@ -186,6 +186,9 @@ public class PlayerScript : MonoBehaviour
         {
             if (!validTags.Contains(collision.gameObject.tag))
                 return; // Exit the function if it's not a valid drop location
+
+            if (currentHoverTag != "" || currentHoverTag != null)
+                currentHoverTag = ""; // Clear the current hover tag since we are hovering over a new item            
             
             if (validTags.Contains(collision.gameObject.tag))
             {
@@ -194,13 +197,12 @@ public class PlayerScript : MonoBehaviour
                 // Change the color of the article piece to a semi-transparant green when hovering over it to indicate that it's a valid drop location
                 collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 0.35f); 
             }
-            
 
             // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
 
             Debug.Log("Entered trigger with tag: " + collision.gameObject.tag);
-            Debug.Log("Current hover tag: " + currentHoverTag);
+            Debug.Log("Current hover tag: " + currentHoverTag); 
         }
     }
 
@@ -239,7 +241,7 @@ public class PlayerScript : MonoBehaviour
         // Set the current zoomedObjectTag in the ZoomAreaScript to this tag. Then it only zooms out if it is the same type of piece that is currently zoomed in
         ZoomAreaScript.currentZoomedObjectTag = this.gameObject.tag;
         // Call the ZoomIn function in the ZoomAreaScript and pass the current piece as a parameter so it can set the zoomed in piece to this piece
-        if (this.gameObject.tag == "ArticleTitleTag")
+        if (this.gameObject.tag == "TitleTag")
             ZoomAreaScript.ZoomIn(ZoomedInSprite_ONLY_FOR_TITLE, true, pieceFactsText); // If the piece is a title, use the title version of the zoomed in sprite since it looks better when zoomed in
         else
             ZoomAreaScript.ZoomIn(ZoomedInSprite, true, pieceFactsText); 

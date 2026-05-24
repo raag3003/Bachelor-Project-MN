@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SystemScript : MonoBehaviour
 {
     public GameObject submitFailedText;
-    public GameObject submitSection;
+    public GameObject submitButton;
 
     [Header("Scenes")]
     public string FakeNewsScene;
@@ -21,7 +21,7 @@ public class SystemScript : MonoBehaviour
 
     private void Start()
     {
-        submitSection.SetActive(false);
+        submitButton.SetActive(false);
     }
 
     public void AddPiece(int _karmaValue)
@@ -31,7 +31,7 @@ public class SystemScript : MonoBehaviour
 
         if (piecesOnArticle == piecesNedded)
         {
-            submitSection.SetActive(true);
+            submitButton.SetActive(true);
             Debug.Log("You have added enough pieces to submit the article!");
         }
 
@@ -43,7 +43,7 @@ public class SystemScript : MonoBehaviour
     {
         karmaScore -= _karmaValue;
         piecesOnArticle--;
-        submitSection.SetActive(false);
+        submitButton.SetActive(false);
         Debug.Log("Removed a piece with a karma value of: " + _karmaValue);
         Debug.Log("Current karma score: " + karmaScore);
     }
@@ -56,21 +56,7 @@ public class SystemScript : MonoBehaviour
          */
         ArticleScript article = GameObject.FindGameObjectWithTag("ArticleTag").GetComponent<ArticleScript>();
 
-        if (!article.isInSubmitArea && piecesNedded == piecesOnArticle)
-        {
-                submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området før du kan indsende den";
-                submitFailedText.SetActive(true);
-                submitFailedText.GetComponent<FailedSubmitScript>().KillMyself(6f);
-                return;
-        }
-        else if (piecesOnArticle != piecesNedded && article.isInSubmitArea)
-        {
-            submitFailedText.GetComponent<Text>().text = "Du skal fylde alle sectioner af artiklen op før du kan vidersende den";
-            submitFailedText.SetActive(true);
-            submitFailedText.GetComponent<FailedSubmitScript>().KillMyself(6f);
-            return;
-        }
-        else if (!article.isInSubmitArea && piecesOnArticle != piecesNedded)
+        if (piecesOnArticle != piecesNedded)
         {
             submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området og fylde alle sectioner af artiklen op før du kan vidersende den";
             submitFailedText.SetActive(true);
