@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 260028004}
   m_Layer: 6
   m_Name: Text_Test_Piece_2 (1)
-  m_TagString: PaperTestTag
+  m_TagString: TextTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1428,7 +1428,7 @@ GameObject:
   - component: {fileID: 312848474}
   m_Layer: 6
   m_Name: Picture_Test_Piece_2
-  m_TagString: PaperTestTag
+  m_TagString: PictureTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 368917641}
   m_Layer: 6
   m_Name: Text_Test_Piece_3 (1)
-  m_TagString: PaperTestTag
+  m_TagString: TextTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2859,7 +2859,7 @@ GameObject:
   - component: {fileID: 573763204}
   m_Layer: 6
   m_Name: Text_Test_Piece_4 (1)
-  m_TagString: PaperTestTag
+  m_TagString: TextTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5512,7 +5512,7 @@ GameObject:
   - component: {fileID: 1169138447}
   m_Layer: 6
   m_Name: Text_Piece_Test_1 (1)
-  m_TagString: PaperTestTag
+  m_TagString: TextTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6547,7 +6547,7 @@ GameObject:
   - component: {fileID: 1374809136}
   m_Layer: 6
   m_Name: Picture_Test_Piece_3
-  m_TagString: PaperTestTag
+  m_TagString: PictureTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7006,7 +7006,7 @@ GameObject:
   - component: {fileID: 1448800561}
   m_Layer: 6
   m_Name: Picture_Test_Piece_4
-  m_TagString: PaperTestTag
+  m_TagString: PictureTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7290,7 +7290,7 @@ GameObject:
   - component: {fileID: 1472200194}
   m_Layer: 6
   m_Name: Picture_Piece_Test_1
-  m_TagString: PaperTestTag
+  m_TagString: PictureTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
