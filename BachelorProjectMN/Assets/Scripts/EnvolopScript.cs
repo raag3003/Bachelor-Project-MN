@@ -26,6 +26,7 @@ public class EnvolopScript : MonoBehaviour
     {
         if (Hovering && Input.GetMouseButtonDown(1)) // Check if right mouse button is clicked while hovering
         {
+            Hovering = false; // Reset hovering state
             ChangeGameObject.SetActive(true); // Change GameObject to show the zoomed-in view
             this.gameObject.SetActive(false); // Deactivate the current GameObject
         }

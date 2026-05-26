@@ -45,6 +45,8 @@ public class PlayerScript : MonoBehaviour
         ZoomAreaScript = ZoomArea.GetComponent<ZoomAreaScript>();
 
         ResetPosition(); // Call the ResetPosition function at the start to make sure that all pieces start at home base
+
+
     }
 
     // Update is called once per frame
