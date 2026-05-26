@@ -186,25 +186,18 @@ public class PlayerScript : MonoBehaviour
         // Otherwise 2 different pieces with same script will be on top of each other and it will look weird.
         if (isDragging && !isStuck)
         {
-            if (!validTags.Contains(collision.gameObject.tag))
-                return; // Exit the function if it's not a valid drop location
-
-            if (currentHoverTag != "" || currentHoverTag != null)
-                currentHoverTag = ""; // Clear the current hover tag since we are hovering over a new item            
-            
-            if (validTags.Contains(collision.gameObject.tag))
-            {
-                // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
-                currentHoverTag = collision.gameObject.tag;
-                // Change the color of the article piece to a semi-transparant green when hovering over it to indicate that it's a valid drop location
-                collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 0.35f); 
-            }
-
             // Since this is 2D. The higher the sorting order, the more on top it is. So set the sorting order to 1 more than the piece it's hovering over.
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
 
-            Debug.Log("Entered trigger with tag: " + collision.gameObject.tag);
-            Debug.Log("Current hover tag: " + currentHoverTag); 
+            string TARGET_TAG = "Article" + this.gameObject.tag;
+            if (collision.gameObject.tag != TARGET_TAG)
+                return; // Exit the function if it's not the correct type of piece for the drop location since it shouldn't interact with it
+
+            else
+            {
+                collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 0.35f);
+                currentHoverTag = collision.gameObject.tag; // Change the current hover tag so it knows where to drop the piece in the OnMouseUp function
+            }            
         }
     }
 
