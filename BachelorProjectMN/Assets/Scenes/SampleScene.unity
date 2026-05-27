@@ -4936,7 +4936,7 @@ MonoBehaviour:
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: 1684962094825528891, guid: 2c079b94b04ba594bbec5e8b42fb30c2, type: 3}
+  ZoomedInSprite: {fileID: 1684962094825528891, guid: 942d3c9cc06831b42816ff11ef45420e, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!61 &651171940
 BoxCollider2D:
@@ -5402,7 +5402,7 @@ MonoBehaviour:
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: -7994730005845227420, guid: 476323061d0ab144abb921e626f4c141, type: 3}
+  ZoomedInSprite: {fileID: 7801019876851494424, guid: 7ec7cb79d928e124cb654f74a0da66ab, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!61 &697959978
 BoxCollider2D:
@@ -5589,8 +5589,8 @@ MonoBehaviour:
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 8528680064372519124, guid: 1f19f8b2482b23543b291aab59dd7240, type: 3}
-  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 8528680064372519124, guid: 1f19f8b2482b23543b291aab59dd7240, type: 3}
+  ZoomedInSprite: {fileID: 7871874518184239381, guid: 2e712addaa632284d848c67fcb9b26ee, type: 3}
+  ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 7871874518184239381, guid: 2e712addaa632284d848c67fcb9b26ee, type: 3}
 --- !u!61 &702095953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15438,7 +15438,7 @@ MonoBehaviour:
   SystemScript: {fileID: 519420033}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 2411321948929614469, guid: c697ccbbcf86cd648b3a4ca213675d81, type: 3}
+  ZoomedInSprite: {fileID: 8257988754165124651, guid: 82a7c2b208e2a3a48b8d7526ca85aa22, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!61 &2064509098
 BoxCollider2D:

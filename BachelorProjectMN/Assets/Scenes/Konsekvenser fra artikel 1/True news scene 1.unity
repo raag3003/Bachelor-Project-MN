@@ -2983,7 +2983,7 @@ MonoBehaviour:
   SystemScript: {fileID: 481647536}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: -2734351162505149662, guid: a1857149f32540e45bec5ca175608532, type: 3}
+  ZoomedInSprite: {fileID: 6947054437885304551, guid: 1d5b3671bbe972740940884ba61919bf, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!1001 &317374023
 PrefabInstance:
@@ -4481,6 +4481,8 @@ MonoBehaviour:
   submitFailedText: {fileID: 1466619857}
   submitButton: {fileID: 213450844}
   roughButton: {fileID: 230023652}
+  slideButtonLeft: 0
+  slideButtonRight: 0
   FakeNewsScene: Fake News Scene 1
   MediocreNewsScene: Mediocer news scene 1
   TrueNewsScene: True news scene 1
@@ -12769,7 +12771,7 @@ MonoBehaviour:
   SystemScript: {fileID: 481647536}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 7801019876851494424, guid: 87fbedfb80507e0418fe4f869e988bbe, type: 3}
+  ZoomedInSprite: {fileID: -1394878286701505166, guid: be0e1ada8a6e0b24e8833da47f970910, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!4 &1383058482 stripped
 Transform:
@@ -13718,7 +13720,7 @@ MonoBehaviour:
   SystemScript: {fileID: 481647536}
   pieceFactsText: 
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
-  ZoomedInSprite: {fileID: 1590756944, guid: 5aebad0d29b6dfe4c9a0bb0a696a4edd, type: 3}
+  ZoomedInSprite: {fileID: 7249175334882866929, guid: 749bc95dd1a29f04f8ab36b57a434c9f, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!50 &1448800561
 Rigidbody2D:
@@ -14273,7 +14275,7 @@ MonoBehaviour:
   SystemScript: {fileID: 481647536}
   pieceFactsText: 
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
-  ZoomedInSprite: {fileID: 2411321948929614469, guid: d3187e098fb9bee46ab6d5da7bc084fe, type: 3}
+  ZoomedInSprite: {fileID: 8257988754165124651, guid: 3ff5c4afe7cdd4b40a55a4d48d629909, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
 --- !u!4 &1476514703 stripped
 Transform:
