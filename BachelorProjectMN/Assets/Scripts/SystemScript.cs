@@ -7,6 +7,7 @@ public class SystemScript : MonoBehaviour
 {
     public GameObject submitFailedText;
     public GameObject submitButton;
+    public GameObject roughButton;
 
     [Header("Scenes")]
     public string FakeNewsScene;
@@ -22,6 +23,7 @@ public class SystemScript : MonoBehaviour
     private void Start()
     {
         submitButton.SetActive(false);
+        //roughButton.SetActive(false);
     }
 
     public void AddPiece(int _karmaValue)
@@ -32,6 +34,7 @@ public class SystemScript : MonoBehaviour
         if (piecesOnArticle == piecesNedded)
         {
             submitButton.SetActive(true);
+            roughButton.SetActive(true);
             Debug.Log("You have added enough pieces to submit the article!");
         }
 

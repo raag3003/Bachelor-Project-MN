@@ -23,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Opbrydning/Pre-Day 1.unity
     guid: 226fc7246499a9b488f51aa128b0a99e
+  - enabled: 1
+    path: Assets/Scenes/Opbrydning/PreDay2Middle.unity
+    guid: e3591fbb4811e9b45a6783aed7c66f0e
+  - enabled: 1
+    path: Assets/Scenes/Opbrydning/PreFakeDay2.unity
+    guid: de5e4300651bb3b4889f24abde583f2d
+  - enabled: 1
+    path: Assets/Scenes/Opbrydning/PreTruthDay2.unity
+    guid: 4fb38ffc41b8d3547b9cfb2cbc7fa49f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e558328a2e8e38543937f597f65dd860, type: 2}
   m_UseUCBPForAssetBundles: 0
