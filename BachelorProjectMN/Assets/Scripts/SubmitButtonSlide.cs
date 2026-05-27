@@ -6,22 +6,49 @@ public class SubmitButtonSlide : MonoBehaviour
     public float duration = 1f;
     public float slideLength = 5f;
     private Vector3 target;
+    //private Vector3 targetRight;
 
+    private SystemScript sS;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Invoke("SlideInFrame", 0);
-        target = transform.position;
-        target.x = target.x - slideLength;
+        sS = GameObject.Find("Main Camera").GetComponent<SystemScript>();
+
+        //Invoke("SlideInFrame", 0);
+        //target = transform.position;
+        //target.x = target.x - slideLength;
+
+        
+    }
+
+    private void Update()
+    {
+        if (sS.slideButtonLeft)
+        {
+            sS.slideButtonLeft = false;
+            target = transform.position;
+            target.x = target.x - slideLength; 
+            StartCoroutine(Slide());
+        }
+
+        if (sS.slideButtonRight)
+        {
+            sS.slideButtonRight = false;
+            target = transform.position;
+            target.x = target.x + slideLength;
+            StartCoroutine(Slide());
+        }
     }
 
 
-
+    /*
     private void SlideInFrame()
     {
         StartCoroutine(Slide());
     }
+    */
 
     IEnumerator Slide()
     {

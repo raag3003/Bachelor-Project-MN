@@ -3114,6 +3114,8 @@ MonoBehaviour:
   submitFailedText: {fileID: 1984420236}
   submitButton: {fileID: 1668091986}
   roughButton: {fileID: 306164759}
+  slideButtonLeft: 0
+  slideButtonRight: 0
   FakeNewsScene: PreFakeDay2
   MediocreNewsScene: PreDay2Middle
   TrueNewsScene: PreTruthDay2
@@ -16664,10 +16666,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoughButton
       objectReference: {fileID: 0}
+    - target: {fileID: 9203417378953472127, guid: 50a6d07112bb96345a94e6498a0d395e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4121732853419985698, guid: 50a6d07112bb96345a94e6498a0d395e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 50a6d07112bb96345a94e6498a0d395e, type: 3}
 --- !u!1001 &2332679291826716953
 PrefabInstance:

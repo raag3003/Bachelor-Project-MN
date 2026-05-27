@@ -9,6 +9,9 @@ public class SystemScript : MonoBehaviour
     public GameObject submitButton;
     public GameObject roughButton;
 
+    public bool slideButtonLeft = false;
+    public bool slideButtonRight = false;
+
     [Header("Scenes")]
     public string FakeNewsScene;
     public string MediocreNewsScene;
@@ -34,6 +37,7 @@ public class SystemScript : MonoBehaviour
         if (piecesOnArticle == piecesNedded)
         {
             submitButton.SetActive(true);
+            slideButtonLeft = true;
             roughButton.SetActive(true);
             Debug.Log("You have added enough pieces to submit the article!");
         }
@@ -47,6 +51,7 @@ public class SystemScript : MonoBehaviour
         karmaScore -= _karmaValue;
         piecesOnArticle--;
         submitButton.SetActive(false);
+        slideButtonRight = true;
         Debug.Log("Removed a piece with a karma value of: " + _karmaValue);
         Debug.Log("Current karma score: " + karmaScore);
     }
