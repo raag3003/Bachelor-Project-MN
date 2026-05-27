@@ -94,4 +94,23 @@ public class SystemScript : MonoBehaviour
             SceneManager.LoadScene(TrueNewsScene);
         }
     }
+
+    public void LastDay()
+    {
+        /*
+         * This is a failsafe to make sure that the player has the right amount of pieces on the article and that the article is in the submit area before they can submit it. 
+         */
+        ArticleScript article = GameObject.FindGameObjectWithTag("ArticleTag").GetComponent<ArticleScript>();
+
+        if (piecesOnArticle != piecesNedded)
+        {
+            submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området og fylde alle sectioner af artiklen op før du kan vidersende den";
+            submitFailedText.SetActive(true);
+            submitFailedText.GetComponent<FailedSubmitScript>().KillMyself(6f);
+            return;
+        }
+
+        Debug.Log("Return to main menu because no more days");
+        SceneManager.LoadScene("MainMenu");
+    }
 }
