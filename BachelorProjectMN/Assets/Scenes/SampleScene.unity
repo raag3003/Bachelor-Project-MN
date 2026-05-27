@@ -1301,9 +1301,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SystemScript
   submitFailedText: {fileID: 1984420236}
   submitButton: {fileID: 1668091986}
-  FakeNewsScene: Fake News Scene 1
-  MediocreNewsScene: Mediocer news scene 1
-  TrueNewsScene: True news scene 1
+  FakeNewsScene: PreFakeDay2
+  MediocreNewsScene: PreDay2Middle
+  TrueNewsScene: PreTruthDay2
   karmaScore: 0
   piecesOnArticle: 0
 --- !u!1 &529605497
