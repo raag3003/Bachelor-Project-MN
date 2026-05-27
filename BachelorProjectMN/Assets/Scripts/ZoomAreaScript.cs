@@ -5,6 +5,8 @@ public class ZoomAreaScript : MonoBehaviour
 {
     public Text factsText;
 
+    public GameObject background; // background for fact box
+
     [HideInInspector]
     public string currentZoomedObjectTag; // Store the tag of the currently zoomed object 
 
@@ -20,11 +22,13 @@ public class ZoomAreaScript : MonoBehaviour
         
         if (needZoom) // If needZoom is true, set the sprite to newSprite
         {
+            background.SetActive(true); // turns on factbox when see fact
             factsText.text = facts; // Update the facts text with the provided facts
             transform.GetComponent<SpriteRenderer>().sprite = newSprite;
         }
         else // Reset everthing to the default state if needZoom is false
         {
+            background.SetActive(false); // turns off factbox when not see fact
             currentZoomedObjectTag = null;
             factsText.text = null;
             transform.GetComponent<SpriteRenderer>().sprite = null;
