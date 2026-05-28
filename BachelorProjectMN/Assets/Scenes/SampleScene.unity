@@ -2588,7 +2588,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1637
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 783.9646
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.1409
       objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
@@ -2668,6 +2684,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_text
+      value: "Hej\n\nVi beklager at vi er n\xF8d til at give dig denne besked p\xE5
+        s\xE5 en mist\xE6nksom m\xE5de, men vi er n\xF8d til at f\xE5 fat i dag inden
+        du bygger din f\xF8rste artikel.\n\nVi kommer fra modstandsgruppen der k\xE6mper
+        mod statens forf\xE6rdelige og voldelige styrestystem.  Vi har fundet beviser
+        for at statens politi er korrupte og f\xE5r folk til at forsvinde. To af
+        dine journalister er med os og har skrevet artikel for dig som vil bevise
+        sandheden.\n\nVi h\xE5ber at du vil fort\xE6lle folket hvad staten g\xF8r
+        mod sin egen befolkning.\n\nVi kontakter dig nok igen.\nModstandsgruppen "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

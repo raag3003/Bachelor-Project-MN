@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Velkommen til Den Nationale Enhedskanal rekrut
+  m_text: Velkommen til den Nationale Enhedskanal (NEK)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -688,16 +688,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Her Hos NEK har du f\xE5et chef-rollen. Din opgave lyder som f\xF8lgende:\n\nDu
-    skal samle artiklen, som vi sender ud til landet. Dine journalister har alle
-    sammen, hver is\xE6r lavet 1 titel, 1 udtaelse og 1 billede, der fort\xE6ller
-    hver sin side af historien.\nVi har samlet billederne, udtaelserne og titlerne
-    i hver sin mappe p\xE5 dit bord.\nDu skal udv\xE6lge 1 titel, 1 billeder og 1
-    udtaele og s\xE6tte det p\xE5 artiklen, som du s\xE5 skal sende afsted.\n\nHusk
-    at det er dig der er chefen, s\xE5 det er op til dig hvilken kombination du v\xE6lger,
-    men husk at staten f\xF8lger med i nyhederne vi sender ud. S\xE5 ikke noget med
-    at f\xE5 staten til at se d\xE5rligt ud.\n\nH\xE5ber din tid her hos NEK bliver
-    god.\nHilsen NEK direkt\xF8r Morten Mogensen.\n"
+  m_text: "Hej\n\nVi byder dig velkommen til din nye stilling som redakt\xF8r her
+    hos NEK.\nDine opgaver som redakt\xF8r vil v\xE6re at bygge artikler og at sende
+    dem afsted til at blive printet. Du har en gruppe journalister som skriver titler,
+    tekster og tager billeder for dig, s\xE5 det eneste du beh\xF8ver at lave er
+    at bygge artiklerne.\n\nDer er p\xE5 det seneste blevet spredt nogle rygter blandt
+    befolkningen om at politiet skulle v\xE6re korrupte og er blevet beordret til
+    at f\xE5 folk til at forsvinde og lignende.\nSom din f\xF8rste opgave skal du
+    bygge en artikel som f\xE5r borgerne p\xE5 andre tanker.\n\nH\xE5ber din tid
+    her hos NEK bliver god.\n\nHilsen NEK\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
