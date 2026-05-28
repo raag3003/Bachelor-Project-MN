@@ -1,6 +1,7 @@
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -124,13 +125,19 @@ public class PlayerScript : MonoBehaviour
             // Add the karma score of the piece to the total karma score in the SystemScript
             SystemScript.AddPiece(karmaScore); 
         }
+
+        // Make sure that all other article sections goes back to the red color indicating they are not filled in yet
+        // And make sure that all other article sections colliders are enabled again so they can interact with the pieces when picking up a piece
         for (int i = 0; i < validTags.Length; i++)
         {
             if (TARGET_TAG == validTags[i])
             {
                 continue; // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
             }
-            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
+            // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f);
+            // Enable the collider of the article pieces to allow interaction when picking up a piece
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<BoxCollider2D>().enabled = true; 
         }
     }
 
@@ -167,6 +174,8 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
+        // Make all article sections that does not fit the piece's target to change color to black indicating that it's not a valid drop location when picking up the piece 
+        // Also disable the collider the article sections as an extra procortion to make sure the piece doesn't interact with the wrong article section when picking it up again
         for (int i = 0; i < validTags.Length; i++)
         {
             if (TARGET_TAG == validTags[i])
@@ -174,6 +183,7 @@ public class PlayerScript : MonoBehaviour
                 continue; // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
             }
             GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color (0f, 0f ,0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<BoxCollider2D>().enabled = false; // Disable the collider of the article pieces to prevent interaction when picking up a piece
         }
 
     }
