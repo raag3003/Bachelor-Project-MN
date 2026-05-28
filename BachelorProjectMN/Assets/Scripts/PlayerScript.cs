@@ -130,7 +130,7 @@ public class PlayerScript : MonoBehaviour
             {
                 continue; // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
             }
-            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color(100f, 0f, 0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
         }
     }
 
@@ -173,7 +173,7 @@ public class PlayerScript : MonoBehaviour
             {
                 continue; // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
             }
-            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color(100f, 0f, 0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color (0f, 0f ,0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
         }
 
     }
