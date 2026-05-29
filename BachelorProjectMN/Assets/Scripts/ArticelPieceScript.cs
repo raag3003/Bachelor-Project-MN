@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 
-public class PlayerScript : MonoBehaviour
+public class ArtcilePieceScript : MonoBehaviour
 {
     [Header("Piece Settings")]
     [SerializeField, Range(-10, 10)]
@@ -130,10 +130,11 @@ public class PlayerScript : MonoBehaviour
         // And make sure that all other article sections colliders are enabled again so they can interact with the pieces when picking up a piece
         for (int i = 0; i < validTags.Length; i++)
         {
-            if (TARGET_TAG == validTags[i])
-            {
-                continue; // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
-            }
+            // If the article section has a piece stuck to it. That section is removed from the scene to keep the game smooth. Therfore skip it if it's null to prevent errors.
+            // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
+            if (TARGET_TAG == validTags[i] || GameObject.FindGameObjectWithTag(validTags[i]) == null)
+                continue; 
+            
             // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
             GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 0.35f);
             // Enable the collider of the article pieces to allow interaction when picking up a piece
@@ -178,12 +179,16 @@ public class PlayerScript : MonoBehaviour
         // Also disable the collider the article sections as an extra procortion to make sure the piece doesn't interact with the wrong article section when picking it up again
         for (int i = 0; i < validTags.Length; i++)
         {
-            if (TARGET_TAG == validTags[i])
-            {
-                continue; // Skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
-            }
-            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color (0f, 0f ,0f, 0.35f); // Change the color of the article pieces to red to indicate that it's not a valid drop location when picking up a piece
-            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<BoxCollider2D>().enabled = false; // Disable the collider of the article pieces to prevent interaction when picking up a piece
+            // If the article section has a piece stuck to it. That section is removed from the scene to keep the game smooth. Therfore skip it if it's null to prevent errors
+            // Or skip the rest of the loop if it's the correct type of piece for the drop location since it shouldn't interact with it
+            if (TARGET_TAG == validTags[i] || GameObject.FindGameObjectWithTag(validTags[i]) == null)
+                continue; 
+            
+
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<SpriteRenderer>().color = new Color (0f, 0f ,0f, 0.35f);
+
+            // Disable the collider of the article pieces to prevent interaction when picking up a piece
+            GameObject.FindGameObjectWithTag(validTags[i]).GetComponent<BoxCollider2D>().enabled = false; 
         }
 
     }
