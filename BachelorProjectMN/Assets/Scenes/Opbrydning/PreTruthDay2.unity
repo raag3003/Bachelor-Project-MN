@@ -689,14 +689,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "REKRUT!!!!!!!!!\nHer i NEK har vi ingen tolerance for l\xF8gn i vores
-    artikler. Korrupt politi?! Hvad t\xE6nker du p\xE5??\n\nIkke desto mindre, s\xE5
-    har vi i bestyrelsen besluttet at give dig en chance mere og fort\xE6lle folket
-    den rigtige historie der for stoppet disse un\xF8dvendige demonstrationer du
-    uden tvivl har h\xF8rt om.\n\nVores indre efterforskning i firmaet har ogs\xE5
-    opdaget nogle potentielle mulvapper.\nVi fort\xE6ller n\xE6rmere n\xE5r vi ved
-    mere. Du skal skrive den rigtige historie herfra.\n\nG\xF8r dit arbejde. \nHilsen
-    NEK og Staten."
+  m_text: "Hej\n\nHer i NEK har vi normalt nul tolerance for ikke at overholde ordrer,
+    men siden det var din f\xF8rste dag s\xE5 h\xE5ber vi at der skete en grusom
+    misforst\xE5else. \nSkal det ikke ske igen.\n\nDu har nok uden tvivl lagt m\xE6rke
+    til den store m\xE6ngde af protester der er rundt omkring i byen. Vi vil gerne
+    have at du beroliger folket fort\xE6ller befolkning at politiet h\xE5ndterer
+    sagen ordentligt.\n\nVi har i \xF8vrigt mistanke for at der skulle v\xE6re nogle
+    medlemmer fra modstandsgruppen som arbejder her. Hvis du ser noget mist\xE6nksomt,
+    s\xE5 reporter det.\n\nHilsen NEK "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

@@ -2981,7 +2981,7 @@ MonoBehaviour:
   HomeBase: {fileID: 971931278}
   ZoomArea: {fileID: 1552556637}
   SystemScript: {fileID: 481647536}
-  pieceFactsText: 
+  pieceFactsText: "Billedet viser demonstranter og politiet st\xE5 overfor hinanden"
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 6947054437885304551, guid: 1d5b3671bbe972740940884ba61919bf, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -12769,7 +12769,7 @@ MonoBehaviour:
   HomeBase: {fileID: 971931278}
   ZoomArea: {fileID: 1552556637}
   SystemScript: {fileID: 481647536}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser en stor gruppe demonstranter
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: -1394878286701505166, guid: be0e1ada8a6e0b24e8833da47f970910, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -13166,8 +13166,7 @@ MonoBehaviour:
   HomeBase: {fileID: 1933566801}
   ZoomArea: {fileID: 1552556637}
   SystemScript: {fileID: 481647536}
-  pieceFactsText: "Denne titel er sand. Flere kilder er generalt hvilket er mere
-    trov\xE6rdigt"
+  pieceFactsText: 
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 7801019876851494424, guid: 5260dbea1cfc2154abfb635352a69c1c, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: -2599704080935688859, guid: df5b13eda1b408a47b5497ad3dee4a6f, type: 3}
@@ -13718,7 +13717,7 @@ MonoBehaviour:
   HomeBase: {fileID: 971931278}
   ZoomArea: {fileID: 1552556637}
   SystemScript: {fileID: 481647536}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser politiet anholde en voldelige demonstrant
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 7249175334882866929, guid: 749bc95dd1a29f04f8ab36b57a434c9f, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -14273,7 +14272,7 @@ MonoBehaviour:
   HomeBase: {fileID: 971931278}
   ZoomArea: {fileID: 1552556637}
   SystemScript: {fileID: 481647536}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser en gruppe voldelige demonstranter mod politiet
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 8257988754165124651, guid: 3ff5c4afe7cdd4b40a55a4d48d629909, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -19557,6 +19556,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -365.945
       objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 774.1743
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.0361
+      objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -19639,12 +19646,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_text
-      value: "Fantastiske rekrut\n\nVi er super glade for dit valg om at fort\xE6lle
-        befolkningen sandheden. Befolkningen tror p\xE5 det og er begyndt at g\xE5
-        p\xE5 gaden for at presse staten til at svarer p\xE5 alle deres sp\xF8rgsm\xE5l.\n\nDesv\xE6rre
-        skubber politiet tilbage igen ved brug af vold. Folk bliver n\xF8dt til at
-        h\xF8rer hvor forf\xE6rdligt politiet behandler de fredelige demonstranter\n\nVi
-        tror p\xE5 dig\n\nViva la revulation - Modstandstyrken"
+      value: "Rigtig godt arbejde i g\xE5r.\r\n\r\nFolket har \xE5bnet deres \xF8jne
+        og g\xE5r nu frit p\xE5 gaderne og r\xE5ber h\xF8jt om at f\xE5 svar fra
+        staten.\r\nPolitiet skubber h\xE5rdt tilbage mod demonstranterne.\r\n\r\nDu
+        er n\xF8d til at skrive om hvor h\xE5rdt politiet behandler de fredelige
+        demonstranter.\r\nJo flere der h\xF8rer om politiets grusomme behandling
+        af folket desto flere vil \xE5bne \xF8jnene for den forandring der skal ske
+        i vores land.\r\n\r\nVi tror p\xE5 dig\r\n\r\nModstandsgruppen\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

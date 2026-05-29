@@ -1650,7 +1650,7 @@ MonoBehaviour:
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser mandens billede taget da han blev anholdt
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 7448738933794498545, guid: 28e4aefdedc827045b52af0521e889a7, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -3548,7 +3548,7 @@ MonoBehaviour:
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: 
+  pieceFactsText: "Billedet viser konen d\xF8d efter mordet"
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: -3747405793915801786, guid: 71783297a1a282f4aaf5175f261ffd3d, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -4603,8 +4603,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 663.2166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 26
+      value: 12.9462
       objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
@@ -4688,13 +4692,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_text
-      value: "REKRUT!!!!!\n\nVi stolede p\xE5 dig. Vi gav dig alle de beviser vi
-        havde for at f\xE5 det korrupte politi ned med nakken.\nMen nu er de stadig
-        p\xE5 fri fod og befolkningen kender ikke til dem.\n\nDu f\xE5r en chance
-        mere. \nVore efterforskning viser at statens st\xF8rste politiske modstander
-        er blevet sat for mordet af sin egen kone. I hvirkeligheden er det korrupte
-        politi der har dr\xE6bt hende og lagt alle beviserne over p\xE5 politikeren.\n\nH\xE5ber
-        du g\xF8r det rigtige denne gang.\nViva la revolation - Modstandsstyrken"
+      value: "Vi stolede p\xE5 dig. Vi gav dig alle beviserne vi havde for at fort\xE6lle
+        folket sandheden om politiet, men nu er de stadig p\xE5 fri fod og folket
+        kender ingenting om det.\r\n\r\nVi giver dig en chance mere for at vise at
+        du er villig til at tage kampen op mod staten og at du st\xE5r med os. Vores
+        efterforskning viser, at statens st\xF8rste politiske modstander er blevet
+        sat op for mordet p\xE5 hans kone. Vi har beviser p\xE5, at han umuligt kunne
+        have gjort det.\r\nPolitiet m\xE5 have plantet beviser p\xE5, at han gjorde
+        det.\r\n\r\nVi h\xE5ber at du g\xF8r det rigtige denne gang.\r\n\r\nModstandsgruppen\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8894,8 +8899,7 @@ MonoBehaviour:
   HomeBase: {fileID: 1482228121}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: "Denne titel er sand. Flere kilder er generalt hvilket er mere
-    trov\xE6rdigt"
+  pieceFactsText: 
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 7801019876851494424, guid: 873ee9593c9f5d5438f4cd9766e8669e, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 7615690843191339487, guid: 8ace309b882ce054588ae3ffacdc4b21, type: 3}
@@ -16108,7 +16112,7 @@ MonoBehaviour:
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: 
+  pieceFactsText: "Billedet viser manden dr\xE6be sin kone."
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 7249175334882866929, guid: cf19c25b6ca5f1f4e8c38964283a957d, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
