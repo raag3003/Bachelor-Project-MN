@@ -2123,8 +2123,7 @@ MonoBehaviour:
   HomeBase: {fileID: 2104441249}
   ZoomArea: {fileID: 994217829}
   SystemScript: {fileID: 373678680}
-  pieceFactsText: "Denne titel er sand. Flere kilder er generalt hvilket er mere
-    trov\xE6rdigt"
+  pieceFactsText: 
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 7801019876851494424, guid: 6596a346f0d7bc3489f251bb6cf6a3f4, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: -2599704080935688859, guid: eb0c6d34a69bdc24a91fb248257470b0, type: 3}
@@ -3503,7 +3502,7 @@ MonoBehaviour:
   HomeBase: {fileID: 1467787015}
   ZoomArea: {fileID: 994217829}
   SystemScript: {fileID: 373678680}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser korrupt politi tage imod penge
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 1684962094825528891, guid: 527e8c5e80d54b24ea200a3c29123d7b, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -8948,7 +8947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_SizeDelta.x
@@ -11287,7 +11286,7 @@ MonoBehaviour:
   HomeBase: {fileID: 1467787015}
   ZoomArea: {fileID: 994217829}
   SystemScript: {fileID: 373678680}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser en mand blive anholdt
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: -4135186756073297588, guid: 43528db7c8de9be4a891eecb128c7e70, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -14295,7 +14294,7 @@ MonoBehaviour:
   HomeBase: {fileID: 1467787015}
   ZoomArea: {fileID: 994217829}
   SystemScript: {fileID: 373678680}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser politiet lave en efterforskning
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: 8257988754165124651, guid: 63f319f150937024984e267d8e8795fd, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}

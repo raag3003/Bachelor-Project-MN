@@ -1650,7 +1650,7 @@ MonoBehaviour:
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: 
+  pieceFactsText: Billedet viser mandens billede taget da han blev anholdt
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 7448738933794498545, guid: 28e4aefdedc827045b52af0521e889a7, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -3548,7 +3548,7 @@ MonoBehaviour:
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: 
+  pieceFactsText: "Billedet viser konen d\xF8d efter mordet"
   DeafaultSprite: {fileID: 7583381788827671684, guid: 810e824a0b85c974c9bd363b34cf3b45, type: 3}
   ZoomedInSprite: {fileID: -3747405793915801786, guid: 71783297a1a282f4aaf5175f261ffd3d, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
@@ -4600,7 +4600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_SizeDelta.y
@@ -8899,8 +8899,7 @@ MonoBehaviour:
   HomeBase: {fileID: 1482228121}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: "Denne titel er sand. Flere kilder er generalt hvilket er mere
-    trov\xE6rdigt"
+  pieceFactsText: 
   DeafaultSprite: {fileID: 4930712665806230739, guid: 005faf821d4d9d54dabd423a4009f888, type: 3}
   ZoomedInSprite: {fileID: 7801019876851494424, guid: 873ee9593c9f5d5438f4cd9766e8669e, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 7615690843191339487, guid: 8ace309b882ce054588ae3ffacdc4b21, type: 3}
@@ -16113,7 +16112,7 @@ MonoBehaviour:
   HomeBase: {fileID: 136743138}
   ZoomArea: {fileID: 324498307}
   SystemScript: {fileID: 1207697174}
-  pieceFactsText: 
+  pieceFactsText: "Billedet viser manden dr\xE6be sin kone."
   DeafaultSprite: {fileID: -5339558469304703658, guid: ccf6d1988ff3dd540ba4b18a730a48ad, type: 3}
   ZoomedInSprite: {fileID: 7249175334882866929, guid: cf19c25b6ca5f1f4e8c38964283a957d, type: 3}
   ZoomedInSprite_ONLY_FOR_TITLE: {fileID: 0}
