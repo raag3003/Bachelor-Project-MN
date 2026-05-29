@@ -1562,7 +1562,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 481647536}
         m_TargetAssemblyTypeName: SystemScript, Assembly-CSharp
-        m_MethodName: LastDay
+        m_MethodName: SubmitArticle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -32,6 +32,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Opbrydning/PreTruthDay2.unity
     guid: 4fb38ffc41b8d3547b9cfb2cbc7fa49f
+  - enabled: 1
+    path: Assets/Scenes/Dag 3 scener/Day 3 - Confused ending.unity
+    guid: 3a88201d316a26141a4b0cc2c716fdb4
+  - enabled: 1
+    path: Assets/Scenes/Dag 3 scener/Day 3 - Matrix ending.unity
+    guid: 56c2af39462b6e641af49d49e4a2660a
+  - enabled: 1
+    path: Assets/Scenes/Dag 3 scener/Day 3 - Midtvejs.unity
+    guid: bc0c7355a9c0a3042b2e672889b0f61e
+  - enabled: 1
+    path: Assets/Scenes/Dag 3 scener/Day 3 - Modstandsgruppe starter.unity
+    guid: d2ef980b37541fa419d04df71a07628b
+  - enabled: 1
+    path: Assets/Scenes/Dag 3 scener/Day 3 - True ending.unity
+    guid: c0dad0829b8acbc4e857d607f9bd1de2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e558328a2e8e38543937f597f65dd860, type: 2}
   m_UseUCBPForAssetBundles: 0

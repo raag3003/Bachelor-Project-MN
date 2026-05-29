@@ -3099,9 +3099,9 @@ MonoBehaviour:
   roughButton: {fileID: 1642582610}
   slideButtonLeft: 0
   slideButtonRight: 0
-  FakeNewsScene: Fake News Scene 1
-  MediocreNewsScene: Mediocer news scene 1
-  TrueNewsScene: True news scene 1
+  FakeNewsScene: Day 3 - Confused ending
+  MediocreNewsScene: Day 3 - Midtvejs
+  TrueNewsScene: Day 3 - Modstandsgruppe starter
   karmaScore: 0
   piecesOnArticle: 0
 --- !u!114 &373678681
@@ -7497,7 +7497,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 373678680}
         m_TargetAssemblyTypeName: SystemScript, Assembly-CSharp
-        m_MethodName: LastDay
+        m_MethodName: SubmitArticle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -680,7 +680,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1207697174}
         m_TargetAssemblyTypeName: SystemScript, Assembly-CSharp
-        m_MethodName: LastDay
+        m_MethodName: SubmitArticle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9453,9 +9453,9 @@ MonoBehaviour:
   roughButton: {fileID: 1302054551}
   slideButtonLeft: 0
   slideButtonRight: 0
-  FakeNewsScene: Fake News Scene 1
-  MediocreNewsScene: Mediocer news scene 1
-  TrueNewsScene: True news scene 1
+  FakeNewsScene: Day 3 - Matrix ending
+  MediocreNewsScene: Day 3 - Confused ending
+  TrueNewsScene: Day 3 - Midtvejs
   karmaScore: 0
   piecesOnArticle: 0
 --- !u!114 &1207697175

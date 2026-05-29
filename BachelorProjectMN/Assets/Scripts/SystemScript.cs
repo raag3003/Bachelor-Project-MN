@@ -72,8 +72,6 @@ public class SystemScript : MonoBehaviour
             return;
         }
 
-
-
         /* Define the karma score thresholds for each category of article. These values can be adjusted as needed to fit the desired scoring system.
          If the karmaScore is between -... and -15 it is considered a horible article, between -14 and -7 it is considered a bad article, between -6 and 6 it is considered a neutral article,
          between 7 and 14 it is considered a solid article, and between 15 and ... it is considered a great article.
@@ -98,24 +96,5 @@ public class SystemScript : MonoBehaviour
             Debug.Log("This article is considered a great article with a karma score of: " + karmaScore);
             SceneManager.LoadScene(TrueNewsScene);
         }
-    }
-
-    public void LastDay()
-    {
-        /*
-         * This is a failsafe to make sure that the player has the right amount of pieces on the article and that the article is in the submit area before they can submit it. 
-         */
-        ArticleScript article = GameObject.FindGameObjectWithTag("ArticleTag").GetComponent<ArticleScript>();
-
-        if (piecesOnArticle != piecesNedded)
-        {
-            submitFailedText.GetComponent<Text>().text = "Du skal flytte artiklen til submit-området og fylde alle sectioner af artiklen op før du kan vidersende den";
-            submitFailedText.SetActive(true);
-            submitFailedText.GetComponent<FailedSubmitScript>().KillMyself(6f);
-            return;
-        }
-
-        Debug.Log("Return to main menu because no more days");
-        SceneManager.LoadScene("MainMenu");
     }
 }

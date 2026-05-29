@@ -39,4 +39,10 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("Mediocer news scene 1");
     }
 
+    public void GoBackToMainMenu()
+    {
+        Debug.Log("Load Main Menu");
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
