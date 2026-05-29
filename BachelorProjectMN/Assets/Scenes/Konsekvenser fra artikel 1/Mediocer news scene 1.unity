@@ -8948,7 +8948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8967,8 +8967,12 @@ PrefabInstance:
       value: -405.86
       objectReference: {fileID: 0}
     - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 783.9645
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -102
+      value: -54.67987
       objectReference: {fileID: 0}
     - target: {fileID: 7461187034051643193, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -9060,10 +9064,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_text
-      value: "Rekrut!\n\nVi er glade for at du har  skrevet om det korrupte politi.
-        Men du bliver n\xF8d til a fort\xE6lle hele historien. Staten har stadig
-        mulighed for at lyve sig ud af det her.\nVi h\xE5ber du vil g\xF8re det rigtige.
-        Vi tror p\xE5 dig\n\nViva la revulation - Modstandstyrken\n"
+      value: "Vi er glade for at du har skrevet om det korrupte politi, men du er
+        n\xF8dt til at fort\xE6lle om hele historien og dybt inde i politiet, staten
+        har deres fingre. \r\nDer er allerede nogle mennesker, der er g\xE5et p\xE5
+        gaden for at f\xE5 svar fra staten om hvorfor der ikke er gjort noget endnu.\r\n\r\nStaten
+        har stadig muligheden for at kunne lyve sig ud af problemerne.\r\nDet er
+        ikke godt nok hvis vi vil have folk til at \xE5bne \xF8jnene over for den
+        grusomme m\xE5de, staten handler p\xE5.\r\n\r\nModstandsgruppen.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

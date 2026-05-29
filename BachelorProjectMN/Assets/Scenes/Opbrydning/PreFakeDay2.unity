@@ -700,12 +700,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hej igen rekrut.\n\nVi her i NEK er meget glade for dit samarbejde i forhold
-    til den tidligere artikel du sendte videre i g\xE5r.\n\nStaten har gjort os opm\xE6rksomme
-    p\xE5 at nogle af vores journalister arbejder imod staten, men vi pr\xF8ver at
-    finde dem og f\xE5 dem afskaffet s\xE5 hurtigt som muligt.\nSkulle du h\xF8rer
-    noget om en modstandsgruppe s\xE5 m\xE5 du endelig sige til.\n\nH\xE5ber du forts\xE6tter
-    med det gode arbejde igen i dag,\n\nHilsen NEK."
+  m_text: "Hej\r\n\r\nVi her i NEK er meget begejstrede for dit gode arbejde p\xE5
+    din f\xF8rste dag. Forts\xE6t med det gode arbejde.\r\n\r\nEn politisk modstander
+    til statens regering er i dag blevet anholdt for mordet p\xE5 hans kone.\r\nVi
+    vil gerne have dig til at skrive en artikel der handler om validiteten af sagen
+    og hvor godt et arbejde politiet har lavet.\r\n\r\nHilsen NEK\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

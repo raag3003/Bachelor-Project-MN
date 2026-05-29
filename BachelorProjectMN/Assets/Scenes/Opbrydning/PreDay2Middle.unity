@@ -643,12 +643,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "P\xE6nt goddag rekrut.\nDin artikel i g\xE5r var.... sp\xE6ndende. At
-    lyve omkring korrupt politi er en sp\xE6ndende taktik p\xE5 f\xF8rste dag, men
-    s\xE5 igen. Det bragte en masse l\xE6sere til, s\xE5 det er ikke noget problem.\n\nIdag
-    vil jeg gerne minde dig om at vi bor i det bedste land p\xE5 jorden. Der er ingen
-    grund til at lyve over for befolkningen.\n\nHav en god arbejdsdag. Husk at staten
-    ogs\xE5 l\xE6ser nyhederne.\n\nHilsen NEK."
+  m_text: "Hej\r\n\r\nDin artikel fra i g\xE5r var okay. Du har f\xF8rt st\xF8rstedelen
+    af befolkningens opm\xE6rksomhed v\xE6k fra mistanken om at politiets ekstra
+    opgaver. Du har til geng\xE6ld stadig ladet noget af folket have mistillid til
+    politiet og det er ikke godt nok. I fremtiden s\xE5 g\xF8r det dit job bedre.\r\n\r\nArtiklen
+    i dag skal handle om hvor stor en indsats politiet g\xF8r for at f\xE5 stoppet
+    den sidste h\xE5ndfuld korrupt politi som du har skrevet om.\r\n\r\nHusk at staten
+    l\xE6ser nyhederne.\r\n\r\nHilsen NEK\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

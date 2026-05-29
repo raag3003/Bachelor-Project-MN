@@ -19539,7 +19539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240857991785239568, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_SizeDelta.x
@@ -19556,6 +19556,14 @@ PrefabInstance:
     - target: {fileID: 4895517825340567603, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -365.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 774.1743
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278952361004216130, guid: a41aacc663bf85a429128b726159e563, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.0361
       objectReference: {fileID: 0}
     - target: {fileID: 7553549571970324177, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_Pivot.x
@@ -19639,12 +19647,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981373537050706124, guid: a41aacc663bf85a429128b726159e563, type: 3}
       propertyPath: m_text
-      value: "Fantastiske rekrut\n\nVi er super glade for dit valg om at fort\xE6lle
-        befolkningen sandheden. Befolkningen tror p\xE5 det og er begyndt at g\xE5
-        p\xE5 gaden for at presse staten til at svarer p\xE5 alle deres sp\xF8rgsm\xE5l.\n\nDesv\xE6rre
-        skubber politiet tilbage igen ved brug af vold. Folk bliver n\xF8dt til at
-        h\xF8rer hvor forf\xE6rdligt politiet behandler de fredelige demonstranter\n\nVi
-        tror p\xE5 dig\n\nViva la revulation - Modstandstyrken"
+      value: "Rigtig godt arbejde i g\xE5r.\r\n\r\nFolket har \xE5bnet deres \xF8jne
+        og g\xE5r nu frit p\xE5 gaderne og r\xE5ber h\xF8jt om at f\xE5 svar fra
+        staten.\r\nPolitiet skubber h\xE5rdt tilbage mod demonstranterne.\r\n\r\nDu
+        er n\xF8d til at skrive om hvor h\xE5rdt politiet behandler de fredelige
+        demonstranter.\r\nJo flere der h\xF8rer om politiets grusomme behandling
+        af folket desto flere vil \xE5bne \xF8jnene for den forandring der skal ske
+        i vores land.\r\n\r\nVi tror p\xE5 dig\r\n\r\nModstandsgruppen\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
