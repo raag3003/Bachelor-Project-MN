@@ -39,11 +39,7 @@ public class SystemScript : MonoBehaviour
             submitButton.SetActive(true);
             slideButtonLeft = true;
             roughButton.SetActive(true);
-            Debug.Log("You have added enough pieces to submit the article!");
         }
-
-        Debug.Log("Added a piece with a karma value of: " + _karmaValue);
-        Debug.Log("Current karma score: " + karmaScore);
     }
 
     public void RemovePiece(int _karmaValue)
@@ -52,10 +48,7 @@ public class SystemScript : MonoBehaviour
         piecesOnArticle--;
         submitButton.SetActive(false);
         slideButtonRight = true;
-        Debug.Log("Removed a piece with a karma value of: " + _karmaValue);
-        Debug.Log("Current karma score: " + karmaScore);
     }
-
 
     public void SubmitArticle()
     {
@@ -76,8 +69,8 @@ public class SystemScript : MonoBehaviour
          If the karmaScore is between -... and -15 it is considered a horible article, between -14 and -7 it is considered a bad article, between -6 and 6 it is considered a neutral article,
          between 7 and 14 it is considered a solid article, and between 15 and ... it is considered a great article.
          This gives us 5 different outcomes for each article. We can change it if needed. */
+        
         int badKarma = -7;
-        // int neutralKarma;
         int solidKarma = 7;
 
         
